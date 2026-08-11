@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/sahl studio logo favicon.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..900&family=Space+Grotesk:wght@300..900&display=swap" rel="stylesheet">
+
+  <title>200 — This page is still being built</title>
+
+  <style>
+  
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 0;
+      transform: translateY(-40px);
+    }
+
+    .error {
+      padding: 40px;
+    }
+
+    .error img {
+      width: 260px;
+    }
+
+    h1 {
+      font-size: 160px;
+      margin: 0;
+      color: var(--green);
+      line-height: 1;
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--green);
+      margin: 10px 0 0;
+    }
+  .p200 {
+    font-size: 15px;
+    color: #ADADAD;
+    margin: 10px;
+  }
+  
+    a {
+      display: inline-block;
+      margin-top: 25px;
+      text-decoration: none;
+      background-color: var(--green);
+      padding: 30px 90px;
+      border-radius: 90px;
+      color: var(--white);
+      font-size: 20px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+a:hover {
+  filter: brightness(1.1);
+}
+
+a:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  filter: brightness(0.95);
+}
+
+    /* ===== phone ===== */
+    @media (max-width: 768px) {
+      .error {
+        padding: 25px;
+      }
+
+      .error img {
+        width: 200px;
+      }
+
+      h1 {
+        font-size: 120px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+      .p200 {
+        font-size: 13px;
+      }
+      a {
+        padding: 25px 50px;
+      }
+    }
+
+    
+  </style>
+</head>
+
+<body>
+  <site-theme></site-theme>
+  <protected-img></protected-img>
+  <main class="error">
+    <h1>200</h1>
+    <img src="images/still cooking.gif" class="protected">
+    <h2>Something new is taking shape.</h2>
+    <p class="p200">This page is still being built. Come back later.</p>
+    <a href="index.html"><pre>GO TO HOMEPAGE ➜</pre></a>
+  </main>
+  
+  <script type="module" src="components/Theme.js"></script>
+  <script type="module" src="components/ProtectedImg.js"></script>
+</body>
+</html>
