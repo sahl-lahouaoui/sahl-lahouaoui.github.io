@@ -52,6 +52,7 @@
   width: 200px;
   height: auto;
   display: block;
+  filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.2));
 }
     
         /* =========================
@@ -98,16 +99,6 @@
 .contact-button{
   background: var(--white);
   color: var(--black);
-}
-
-.contact-text h2 {
-  animation-duration: 2s;
-  animation-name: lala;
-  animation-timing-function: ease;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-direction: Slide Right;
-  animation-play-state: ;
 }
 
 

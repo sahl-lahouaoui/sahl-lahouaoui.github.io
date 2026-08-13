@@ -90,7 +90,7 @@ class SiteFooter extends HTMLElement {
         }
 
         .footer-links a:hover {
-          color: var(--green);
+          color: var(--white);
         }
 
 
@@ -124,8 +124,8 @@ class SiteFooter extends HTMLElement {
         }
 
         .footer-social-icons a:hover {
-          background: var(--green);
-          border-color: var(--green);
+          background: var(--white);
+          border-color: var(--white);
           color: #1A1A1A;
           transform: translateY(-3px);
         }
@@ -278,8 +278,7 @@ class SiteFooter extends HTMLElement {
               <!-- Instagram -->
 
               <a
-               <!-- href="https://www.instagram.com/che4do?igsh=NTVhOXJ4Zno4cWV1"-->
-                href="#"
+    href="404.html"
                 aria-label="Instagram"
                 target="_blank"
                 rel="noopener noreferrer"
