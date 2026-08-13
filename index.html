@@ -121,30 +121,7 @@
   <script type="module" src="components/Theme.js"></script>
   <script type="module" src="components/ProtectedImg.js"></script>
 
-  <script>
-const IMAGE_BACKEND = "https://image-backend-kappa.vercel.app";
-
-document.querySelectorAll("img").forEach(img => {
-    const src = img.getAttribute("src");
-
-    if (!src || !src.startsWith("images/")) return;
-
-    const path = src.replace(/^images\//, "");
-
-    img.src = `${IMAGE_BACKEND}/image/${path}?width=800`;
-
-    img.srcset = `
-        ${IMAGE_BACKEND}/image/${path}?width=400 400w,
-        ${IMAGE_BACKEND}/image/${path}?width=800 800w,
-        ${IMAGE_BACKEND}/image/${path}?width=1200 1200w
-    `;
-
-    img.sizes = "100vw";
-
-    img.loading = "lazy";
-    img.decoding = "async";
-});
-</script>
+  
 
 </body>
 </html>
