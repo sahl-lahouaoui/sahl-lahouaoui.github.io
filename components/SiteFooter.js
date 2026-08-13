@@ -278,7 +278,8 @@ class SiteFooter extends HTMLElement {
               <!-- Instagram -->
 
               <a
-                href="https://www.instagram.com/che4do?igsh=NTVhOXJ4Zno4cWV1"
+               <!-- href="https://www.instagram.com/che4do?igsh=NTVhOXJ4Zno4cWV1"-->
+                href="#"
                 aria-label="Instagram"
                 target="_blank"
                 rel="noopener noreferrer"
