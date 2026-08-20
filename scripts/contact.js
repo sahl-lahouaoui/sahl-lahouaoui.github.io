@@ -20,8 +20,12 @@ form.addEventListener("submit", function (event) {
             form.reset();
         })
         .catch((error) => {
-            console.error("EmailJS error:", error);
-            alert("Something went wrong. Please try again.");
-        });
+    console.error("EmailJS error:", error);
+
+    alert(
+        "Error: " +
+        (error.text || error.message || JSON.stringify(error))
+    );
+});
 });
 
