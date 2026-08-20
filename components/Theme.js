@@ -30,12 +30,13 @@ class Theme extends HTMLElement {
     --yellow-: 243 210 30;
     
     
-    color-scheme: light;
+    color-scheme: light only;
     }
     
     html {
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
+     background: var(--white) !important;
     }
     
     a, button {
@@ -48,7 +49,7 @@ class Theme extends HTMLElement {
     
     body {
     font-family: "Plus Jakarta Sans", sans-serif;
-    background: #FAFAF7;
+    background: var(--white) !important;
     min-height: 100vh;
     }
     
@@ -64,7 +65,9 @@ class Theme extends HTMLElement {
     color: var(--white);
     }
     </style>
-      
+    <head>
+      <meta name="color-scheme" content="light only">
+    </head>
       `;
       
   }
