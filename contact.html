@@ -18,18 +18,7 @@
             href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&display=swap"
             rel="stylesheet"
         />
-        <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "aREtvPgmDZkxOyQSJ",
-      });
-   })();
-</script>
-        <script src="scripts/contact.js"></script>
-        <title>contact - Sahl</title>
+                <title>contact - Sahl</title>
     </head>
     <body>
         <site-theme></site-theme>
@@ -37,71 +26,94 @@
 
         <h1 class="contact-title">Get in touch with me.</h1>
 
-        <section class="template">
-            <form onsubmit="event.preventDefault(); sendMessage();">
-                <div class="name">
-                    <h2>Hi, I’m</h2>
-                    <input type="text" name="name" placeholder="What's your name?" required />
-                </div>
+<section class="template">
+    <form id="contact-form">
 
-                <div class="email">
-                    <h2>Where can I reach you?</h2>
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="What's your email address?"
-                        required
+        <div class="name">
+            <h2>Hi, I’m</h2>
+            <input
+                type="text"
+                name="name"
+                placeholder="What's your name?"
+                required
+            />
+        </div>
+
+        <div class="email">
+            <h2>Where can I reach you?</h2>
+            <input
+                type="email"
+                name="email"
+                placeholder="What's your email address?"
+                required
+            />
+        </div>
+
+        <div class="reason">
+            <h2>What brings you here?</h2>
+            <input
+                type="text"
+                name="reason"
+                placeholder="What's this about?"
+                required
+            />
+        </div>
+
+        <div class="message">
+            <h1>And let’s talk.</h1>
+            <h2>What would you like to share?</h2>
+
+            <textarea
+                name="message"
+                placeholder="Tell me a little more..."
+                required
+            ></textarea>
+        </div>
+
+        <label class="privacy-consent">
+            <input
+                type="checkbox"
+                name="privacy_consent"
+                value="I agree"
+                required
+            />
+            <span>
+                I agree to share my information so you can reply to me.
+            </span>
+        </label>
+
+        <button type="submit" class="submit-button">
+            <span data-i18n="send_message">send message</span>
+
+            <span class="arrow">
+                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path
+                        d="M3.125 10H16.875"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
                     />
-                </div>
+                    <path
+                        d="M11.25 4.375L16.875 10L11.25 15.625"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+                </svg>
+            </span>
+        </button>
 
-                <div class="reason">
-                    <h2>What brings you here?</h2>
-                    <input type="text" name="reason" placeholder="What's this about?" required />
-                </div>
-
-                <div class="message">
-                    <h1>And let’s talk.</h1>
-                    <h2>What would you like to share?</h2>
-                    <textarea
-                        name="message"
-                        placeholder="Tell me a little more..."
-                        required
-                    ></textarea>
-                </div>
-
-                <label class="privacy-consent">
-                    <input type="checkbox" name="privacy_consent" value="I agree" required />
-                    <span> I agree to share my information so you can reply to me. </span>
-                </label>
-
-                <button type="submit" class="submit-button">
-                    <span data-i18n="send_message">send message</span>
-                    <span class="arrow">
-                        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                            <path
-                                d="M3.125 10H16.875"
-                                stroke="currentColor"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            />
-                            <path
-                                d="M11.25 4.375L16.875 10L11.25 15.625"
-                                stroke="currentColor"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            />
-                        </svg>
-                    </span>
-                </button>
-            </form>
-        </section>
+    </form>
+</section>
 
         <site-footer></site-footer>
         <script type="module" src="components/SiteFooter.js"></script>
         <script type="module" src="components/SiteHeader.js"></script>
         <script type="module" src="components/Theme.js"></script>
         
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script src="scripts/contact.js"></script>
     </body>
 </html>

@@ -1,17 +1,26 @@
-function sendMessage()
-{
-    const serviceID = "service_2pdjr0m";
-    const templateID = "template_yaom5pe";
+(function () {
+    emailjs.init({
+        publicKey: "aREtvPgmDZkxOyQSJ",
+    });
+})();
 
-    let params = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        reason: document.getElementById("reason").value,
-        message: document.getElementById("message").value,
-        privacy_consent: document.getElementById("privacy_consent").value,
-    }
+const form = document.getElementById("contact-form");
 
-    emailjs.send(serviceID, templateID, params)
-    .then(response => console.log("SUCCESS:" + response.status))
-    .catch(error => console.log("ERROR:", error))
-}
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    emailjs
+        .sendForm(
+            "service_2pdjr0m",
+            "template_yaom5pe",
+            form
+        )
+        .then(function () {
+            alert("Message sent successfully!");
+            form.reset();
+        })
+        .catch(function (error) {
+            console.error("EmailJS ERROR:", error);
+            alert("Something went wrong. Please try again.");
+        });
+});
