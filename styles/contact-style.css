@@ -258,3 +258,55 @@ input:-webkit-autofill:invalid {
     opacity: 0;
     pointer-events: none;
 }
+
+
+.form-status {
+    margin-top: 20px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    min-height: 20px;
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.form-status.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.form-status.success {
+    color: green;
+}
+
+.form-status.error {
+    color: red;
+}
+
+.submit-button[disabled] {
+    cursor: not-allowed;
+}
+
+.submit-button .spinner {
+    width: 18px;
+    height: 18px;
+    border: 2.5px solid rgb(255 255 255 / 30%);
+    border-top-color: var(--white);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    display: none;
+}
+
+.submit-button.loading .spinner {
+    display: inline-block;
+}
+
+.submit-button.loading .default-content {
+    display: none;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}

@@ -106,8 +106,9 @@
                     />
                 </svg>
             </span>
+            <span class="spinner"></span>
         </button>
-
+<div class="form-status" aria-live="polite"></div>
         <input
     type="text"
     name="website"
@@ -157,6 +158,52 @@ requiredFields.forEach((field) => {
     });
 });
         
+        
+        
+        (function () {
+    emailjs.init({
+        publicKey: "aREtvPgmDZkxOyQSJ",
+    });
+})();
+
+const form = document.getElementById("contact-form");
+const statusBox = document.querySelector(".form-status");
+const submitBtn = form.querySelector(".submit-button");
+
+function showStatus(message, type) {
+    statusBox.textContent = message;
+    statusBox.className = "form-status show " + type;
+}
+
+function setLoading(isLoading) {
+    submitBtn.disabled = isLoading;
+    submitBtn.classList.toggle("loading", isLoading);
+}
+
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    if (form.website.value.trim() !== "") {
+        return;
+    }
+
+    setLoading(true);
+    statusBox.className = "form-status";
+
+    emailjs
+        .sendForm("service_2pdjr0m", "template_yaom5pe", form)
+        .then(function () {
+            showStatus("تصيفطات الرسالة بنجاح! غادي نرد عليك قريب.", "success");
+            form.reset();
+        })
+        .catch(function (error) {
+            console.error("EmailJS ERROR:", error);
+            showStatus("وقع خطأ. عافاك حاول مرة أخرى.", "error");
+        })
+        .finally(function () {
+            setLoading(false);
+        });
+});
         </script>
     </body>
 </html>
