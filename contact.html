@@ -6,62 +6,65 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Portfolio of Sahl Lahouaoui" />
         <meta name="author" content="Sahl Lahouaoui" />
-        <meta name="theme-color" content="#1A1A1A" />
+        <meta name="theme-color" content="var(--black)" />
         <link rel="icon" href="images/sahl studio logo favicon.webp" />
         <meta property="og:title" content="Sahl Portfolio" />
         <meta property="og:image" content="images/preview.jpg" />
         <meta property="og:type" content="website" />
-        <link rel="stylesheet" href="styles/style.css" />
+        <link rel="stylesheet" href="styles/contact-style.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&display=swap"
+            rel="stylesheet"
         />
-        <title>Sahl Portfolio</title>
+        <title>contact - Sahl</title>
     </head>
     <body>
-        <site-loader></site-loader>
-        <script type="module" src="components/SiteLoader.js"></script>
         <site-theme></site-theme>
         <site-header></site-header>
-        <protected-img></protected-img>
 
-        <section class="hero">
-            <h1 class="hero-titel">Hi</h1>
-            <h1 class="hero-subtitel-phone">WELCOME TO MY CREATIVE SPACE</h1>
-            <h1 class="hero-subtitel-pc" data-i18n="hero_subtitel_pc" data-i18n-fit>
-                HI, WELCOME TO MY CREATIVE SPACE
-            </h1>
-            <img src="images/home/hero img.webp" class="hero-img protected" />
-        </section>
+        <h1 class="contact-title">Get in touch with me.</h1>
 
-        <section class="portfolio">
-            <div class="port-links">
-                <a href="photography.html"
-                    ><img src="images/home/link-img-photo.webp" class="protected"
-                /></a>
-                <a href="design.html"
-                    ><img src="images/home/link-img-design.webp" class="protected"
-                /></a>
-                <a href="ART.html"><img src="images/home/link-img-art.webp" class="protected" /></a>
-            </div>
-        </section>
-
-        <!-- =========================
-           CONTACT SECTION
-      ========================= -->
-
-        <section class="contact-section" id="contact">
-            <div class="contact-top">
-                <div class="contact-text">
-                    <h2 data-i18n="h2_contact">Let’s chat.</h2>
-                    <p data-i18n="p_contact">
-                        Want to talk, share, or simply say hello? Let’s connect.
-                    </p>
+        <section class="template">
+            <form id="contact-form">
+                <div class="name">
+                    <h2>Hi, I’m</h2>
+                    <input type="text" name="name" placeholder="What's your name?" required />
                 </div>
-                <a href="contact.html" class="contact-button">
-                    <span data-i18n="span_contact">GET IN TOUCH</span>
+
+                <div class="email">
+                    <h2>Where can I reach you?</h2>
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="What's your email address?"
+                        required
+                    />
+                </div>
+
+                <div class="reason">
+                    <h2>What brings you here?</h2>
+                    <input type="text" name="reason" placeholder="What's this about?" required />
+                </div>
+
+                <div class="message">
+                    <h1>And let’s talk.</h1>
+                    <h2>What would you like to share?</h2>
+                    <textarea
+                        name="message"
+                        placeholder="Tell me a little more..."
+                        required
+                    ></textarea>
+                </div>
+
+                <label class="privacy-consent">
+                    <input type="checkbox" name="privacy_consent" value="I agree" required />
+                    <span> I agree to share my information so you can reply to me. </span>
+                </label>
+
+                <button type="submit" class="submit-button">
+                    <span data-i18n="send_message">send message</span>
                     <span class="arrow">
                         <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
                             <path
@@ -80,15 +83,16 @@
                             />
                         </svg>
                     </span>
-                </a>
-            </div>
-            <div class="contact-line"></div>
+                </button>
+            </form>
         </section>
 
         <site-footer></site-footer>
         <script type="module" src="components/SiteFooter.js"></script>
         <script type="module" src="components/SiteHeader.js"></script>
         <script type="module" src="components/Theme.js"></script>
-        <script type="module" src="components/ProtectedImg.js"></script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script src="scripts/contact.js"></script>
     </body>
 </html>

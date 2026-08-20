@@ -63,7 +63,7 @@ export const translations = {
             'من خلال الدخول إلى هذا الموقع واستخدامه، فإنك تقر بأنك قرأت هذه الشروط والأحكام وفهمتها ووافقت عليها.',
 
         h2_contact: 'لنتحدث قليلًا.',
-        p_contact: 'مجموعة من المشاريع والتجارب والأفكار والأعمال التي صنعتها خلال رحلتي.',
+        p_contact: 'هل ترغب في التحدث أو مشاركة شيء ما، أو مجرد إلقاء التحية؟ لنتحدث.',
         span_contact: 'تواصل معي',
     },
 
@@ -127,8 +127,7 @@ export const translations = {
             "En accédant à ce site et en l'utilisant, vous reconnaissez avoir lu, compris et accepté ces Termes & Conditions.",
 
         h2_contact: 'Parlons un peu.',
-        p_contact:
-            'Une collection de projets, d’expérimentations, d’idées et de créations réalisées au fil du temps.',
+        p_contact: 'Envie d’échanger, de partager ou simplement de dire bonjour ? Parlons-en.',
         span_contact: 'ME CONTACTER',
     },
 };

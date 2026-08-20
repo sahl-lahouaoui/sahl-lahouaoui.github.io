@@ -31,7 +31,6 @@ class SiteFooter extends HTMLElement {
 
         .footer-brand {
           max-width: 260px;
-    
         }
 
         .footer-logo {
@@ -89,8 +88,10 @@ class SiteFooter extends HTMLElement {
           transition: color 0.25s ease;
         }
 
-        .footer-links a:hover {
+        .footer-links a:hover,
+        .footer-links a:focus-visible {
           color: var(--white);
+          text-decoration: underline;
         }
 
 
@@ -123,7 +124,8 @@ class SiteFooter extends HTMLElement {
             transform 0.25s ease;
         }
 
-        .footer-social-icons a:hover {
+        .footer-social-icons a:hover,
+        .footer-social-icons a:focus-visible {
           background: var(--white);
           border-color: var(--white);
           color: #1A1A1A;
@@ -157,7 +159,6 @@ class SiteFooter extends HTMLElement {
 
         @media (max-width: 768px) {
 
-          
           .site-footer {
             padding: 48px 24px 0;
           }
@@ -169,26 +170,6 @@ class SiteFooter extends HTMLElement {
 
           .footer-brand {
             max-width: 100%;
-          }
-        }
-
-
-        /* =========================
-           SMALL PHONES
-        ========================= */
-
-        @media (max-width: 480px) {
-
-          .contact-text h2 {
-            font-size: 48px;
-          }
-
-          .contact-text p {
-            font-size: 18px;
-          }
-
-          .contact-button {
-            height: 80px;
           }
         }
       </style>
@@ -210,6 +191,9 @@ class SiteFooter extends HTMLElement {
               src="images/logo/logo-monochrome.webp"
               alt="Sahl logo"
               class="footer-logo"
+              loading="lazy"
+              width="140"
+              height="70"
             >
 
             <p data-i18n="footer_tagline">
@@ -275,10 +259,9 @@ class SiteFooter extends HTMLElement {
             <div class="footer-social-icons">
 
 
-              <!-- Instagram -->
-
+        
               <a
-    href="404.html"
+                href="404.html"
                 aria-label="Instagram"
                 target="_blank"
                 rel="noopener noreferrer"
