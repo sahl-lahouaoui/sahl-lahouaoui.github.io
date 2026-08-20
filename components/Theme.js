@@ -28,6 +28,9 @@ class Theme extends HTMLElement {
     --green-: 135 185 68;
     --red-: 245 55 71;
     --yellow-: 243 210 30;
+    
+    
+    color-scheme: light;
     }
     
     html {
