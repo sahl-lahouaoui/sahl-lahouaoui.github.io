@@ -9,6 +9,11 @@ const form = document.getElementById("contact-form");
 form.addEventListener("submit", function (event) {
     event.preventDefault();
 
+    if (honeypot.value.trim() !== "") {
+        return;
+    }
+
+    
     emailjs
         .sendForm(
             "service_2pdjr0m",
@@ -24,3 +29,4 @@ form.addEventListener("submit", function (event) {
             alert("Something went wrong. Please try again.");
         });
 });
+

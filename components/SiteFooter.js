@@ -43,7 +43,7 @@ class SiteFooter extends HTMLElement {
         }
 
         .footer-brand p {
-          font-family: 'Manrope', sans-serif;
+          font-family: 'Plus Jakarta Sans', sans-serif;
           font-size: 0.85rem;
           line-height: 1.6;
           color: rgba(250, 250, 247, 0.6);
@@ -57,7 +57,7 @@ class SiteFooter extends HTMLElement {
 
         .footer-links h3,
         .footer-social h3 {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: 'Sora', sans-serif;
           font-size: 0.85rem;
           font-weight: 600;
           letter-spacing: 0.5px;
@@ -79,7 +79,7 @@ class SiteFooter extends HTMLElement {
         }
 
         .footer-links a {
-          font-family: 'Manrope', sans-serif;
+          font-family: 'Plus Jakarta Sans', sans-serif;
           font-size: 0.9rem;
 
           color: #FAFAF7;
@@ -147,7 +147,7 @@ class SiteFooter extends HTMLElement {
         }
 
         .footer-bottom span {
-          font-family: 'Manrope', sans-serif;
+          font-family: 'Plus Jakarta Sans', sans-serif;
           font-size: 0.78rem;
           color: rgba(250, 250, 247, 0.45);
         }

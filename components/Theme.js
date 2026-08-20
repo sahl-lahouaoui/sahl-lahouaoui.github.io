@@ -19,7 +19,15 @@ class Theme extends HTMLElement {
     --green: #87B944;
     --red: #F53747;
     --yellow: #F3D21E;
-    --brawn: #;
+    --brown: #;
+    
+    --orange-: 244 122 42;
+    --blue-: 96 230 252;
+    --white-: 250 250 247;
+    --black-: 26 26 26;
+    --green-: 135 185 68;
+    --red-: 245 55 71;
+    --yellow-: 243 210 30;
     }
     
     html {
@@ -36,7 +44,7 @@ class Theme extends HTMLElement {
     }
     
     body {
-    font-family: 'Manrope' , sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif;
     background: #FAFAF7;
     min-height: 100vh;
     }
@@ -46,7 +54,11 @@ class Theme extends HTMLElement {
     text-align: right;
     }
     h1 {
-    font-family: 'Space Grotesk';
+    font-family: "Sora", sans-serif;
+    }
+    ::selection {
+    background: rgb(var(--orange-) / 60%);
+    color: var(--white);
     }
     </style>
       

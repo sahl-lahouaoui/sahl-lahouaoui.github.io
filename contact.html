@@ -13,12 +13,13 @@
         <meta property="og:type" content="website" />
         <link rel="stylesheet" href="styles/contact-style.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&display=swap"
-            rel="stylesheet"
-        />
-                <title>contact - Sahl</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&family=Sora:wght@100..800&display=swap"
+/>
+        
+        <title>contact - Sahl</title>
     </head>
     <body>
         <site-theme></site-theme>
@@ -43,6 +44,7 @@
             <h2>Where can I reach you?</h2>
             <input
                 type="email"
+                id="email"
                 name="email"
                 placeholder="What's your email address?"
                 required
@@ -70,6 +72,7 @@
             ></textarea>
         </div>
 
+        
         <label class="privacy-consent">
             <input
                 type="checkbox"
@@ -105,6 +108,14 @@
             </span>
         </button>
 
+        <input
+    type="text"
+    name="website"
+    class="honeypot"
+    tabindex="-1"
+    autocomplete="off"
+    aria-hidden="true"
+/>
     </form>
 </section>
 
@@ -115,5 +126,36 @@
         
         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
         <script src="scripts/contact.js"></script>
+        
+        <script>
+        const email = document.getElementById("email");
+
+email.addEventListener("blur", () => {
+    if (email.value === "") {
+        email.classList.remove("error", "success");
+    } else if (email.validity.valid) {
+        email.classList.remove("error");
+        email.classList.add("success");
+    } else {
+        email.classList.remove("success");
+        email.classList.add("error");
+    }
+});
+        
+        const requiredFields = form.querySelectorAll("[required]");
+
+requiredFields.forEach((field) => {
+    field.addEventListener("invalid", () => {
+        field.parentElement.classList.add("required-error");
+    });
+
+    field.addEventListener("input", () => {
+        if (field.value.trim() !== "") {
+            field.parentElement.classList.remove("required-error");
+        }
+    });
+});
+        
+        </script>
     </body>
 </html>
