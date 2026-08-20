@@ -14,6 +14,18 @@ class SiteLoader extends HTMLElement {
 #loader span img {
   width: 250px;
   height: auto;
+  animation: logoPulse 1.6s ease-in-out infinite;
+}
+
+@keyframes logoPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
 }
 
 #loader.hide {
