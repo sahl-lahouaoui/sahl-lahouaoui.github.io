@@ -9,9 +9,9 @@ const form = document.getElementById("contact-form");
 form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    if (form.website.value.trim() !== "") {
-    return;
-}
+    if (honeypot.value.trim() !== "") {
+        return;
+    }
 
     
     emailjs
