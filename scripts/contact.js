@@ -1,31 +1,17 @@
-(function () {
-    emailjs.init({
-        publicKey: "aREtvPgmDZkxOyQSJ",
-    });
-})();
+function sendMessage()
+{
+    const serviceID = "service_2pdjr0m";
+    const templateID = "template_yaom5pe";
 
-const form = document.getElementById("contact-form");
+    let params = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        reason: document.getElementById("reason").value,
+        message: document.getElementById("message").value,
+        privacy_consent: document.getElementById("privacy_consent").value,
+    }
 
-form.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    emailjs
-        .sendForm(
-            "service_2pdjr0m",
-            "template_s49qyci",
-            form
-        )
-        .then(() => {
-            alert("Message sent successfully!");
-            form.reset();
-        })
-        .catch((error) => {
-    console.error("EmailJS error:", error);
-
-    alert(
-        "Error: " +
-        (error.text || error.message || JSON.stringify(error))
-    );
-});
-});
-
+    emailjs.send(serviceID, templateID, params)
+    .then(response => console.log("SUCCESS:" + response.status))
+    .catch(error => console.log("ERROR:", error))
+}
