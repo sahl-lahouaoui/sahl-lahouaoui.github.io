@@ -1,6 +1,6 @@
 class Zoomable extends HTMLElement {
-  connectedCallback() {
-    this.innerHTML = `
+    connectedCallback() {
+        this.innerHTML = `
       <style>
            /*   zoomabel   */
 .zoomable{ cursor:zoom-in; }
@@ -45,32 +45,33 @@ class Zoomable extends HTMLElement {
   </div>
 </div>
       `;
-      // ===== Zoomable images (lightbox) =====
-    const lightboxOverlay = document.getElementById('lightboxOverlay');
-    const lightboxImg = document.getElementById('lightboxImg');
-    const closeBtn = document.getElementById('lightboxClose');
+        // ===== Zoomable images (lightbox) =====
+        const lightboxOverlay = document.getElementById('lightboxOverlay');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const closeBtn = document.getElementById('lightboxClose');
 
-    document.querySelectorAll('.zoomable').forEach(img => {
-      img.addEventListener('click', () => {
-        lightboxImg.src = img.src;
-        lightboxImg.alt = img.alt;
-        lightboxOverlay.classList.add('open');
-        document.body.style.overflow = 'hidden';
-      });
-    });
+        document.querySelectorAll('.zoomable').forEach((img) => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightboxOverlay.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            });
+        });
 
-    function closeLightbox(){
-      lightboxOverlay.classList.remove('open');
-      document.body.style.overflow = '';
+        function closeLightbox() {
+            lightboxOverlay.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        closeBtn.addEventListener('click', closeLightbox);
+        lightboxOverlay.addEventListener('click', (e) => {
+            if (e.target === lightboxOverlay) closeLightbox();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
     }
-
-    closeBtn.addEventListener('click', closeLightbox);
-    lightboxOverlay.addEventListener('click', e => { if (e.target === lightboxOverlay) closeLightbox(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
-
-  }
 }
 
-customElements.define("zoomable-photos", Zoomable);
-
-
+customElements.define('zoomable-photos', Zoomable);

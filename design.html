@@ -1,79 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Sahl Lahouaoui">
-  <meta name="author" content="Sahl Lahouaoui">
-  <meta name="theme-color" content="var(--black)">
-  <link rel="icon" href="images/logo/logo-favicon.webp">
-  <meta property="og:title" content="Sahl Portfolio">
-  <meta property="og:image" content="images/logo/preview.webp">
-  <meta property="og:type" content="website">
-  <link rel="stylesheet" href="styles/design-style.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-  <title>design - Sahl</title>
-</head>
-<body>
-  <site-loader></site-loader>
-  <script type="module" src="components/SiteLoader.js"></script>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Portfolio of Sahl Lahouaoui" />
+        <meta name="author" content="Sahl Lahouaoui" />
+        <meta name="theme-color" content="var(--black)" />
+        <link rel="icon" href="images/logo/logo-favicon.webp" />
+        <meta property="og:title" content="Sahl Portfolio" />
+        <meta property="og:image" content="images/logo/preview.webp" />
+        <meta property="og:type" content="website" />
+        <link rel="stylesheet" href="styles/design-style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&display=swap"
+            rel="stylesheet"
+        />
+        <title>design - Sahl</title>
+    </head>
+    <body>
+        <site-loader></site-loader>
+        <script type="module" src="components/SiteLoader.js"></script>
+        <site-theme></site-theme>
+        <site-header></site-header>
+        <zoomable-photos></zoomable-photos>
 
-  <site-theme></site-theme>
-  <site-header></site-header>
-  <zoomable-photos></zoomable-photos>
-  
-  <section class="reebok">
-      <h1 class="reebok-titel" data-i18n="reebok">Reebok</h1>
-      <div class="reebok-sktechs" >
-        <div class="sktech1">
-          <img src="images/sketch reebok 1.webp" class="zoomable" >
-        </div>
-        
-        <div class="sktech2">
-          <img src="images/sketch reebok 2.webp" class="zoomable" >
-        </div>
-        
-        <div class="T-reebok">
-          <img src="images/T reebok logo.webp" class="zoomable" >
-        </div>
-        
-        <div class="reebok-logo">
-          <img src="images/reebok logo.webp" class="zoomable" >
-        </div>
-        
-        <div class="TF">
-          <img src="images/TF reebok.webp" class="zoomable" >
-        </div>
-        
-      </section>
-  
-  
-  
-<site-footer></site-footer>
-<script type="module" src="components/SiteFooter.js"></script>
-<script type="module" src="components/SiteHeader.js"></script>
-<script type="module" src="components/Zoomable.js"></script>
-<script type="module" src="components/Theme.js"></script>
+        <section class="design">
+            <div class="design-1">
+                <h1>Traditional Version</h1>
+                <img src="images/design candy.webp" class="zoomable" />
+                <h1>Digital Version</h1>
+                <img src="images/design candy DG.webp" class="zoomable" />
+            </div>
 
-    <script>
-        // ===== Info button (view details popup) =====
-    document.querySelectorAll('.info-btn').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const popup = btn.nextElementSibling;
-        const isOpen = popup.classList.contains('open');
+            <div class="wave">
+                <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                    <path d="M0,40 C360,120 1080,-40 1440,40 L1440,120 L0,120 Z"></path>
+                </svg>
+            </div>
+        </section>
 
-        document.querySelectorAll('.info-popup.open').forEach(p => p.classList.remove('open'));
+        <c-s></c-s>
+        <site-footer></site-footer>
+        <script type="module" src="components/SiteFooter.js"></script>
+        <script type="module" src="components/SiteHeader.js"></script>
+        <script type="module" src="components/Zoomable.js"></script>
+        <script type="module" src="components/Theme.js"></script>
+        <script type="module" src="components/ComingSoon.js"></script>
 
-        if (!isOpen) popup.classList.add('open');
-      });
-    });
-  document.addEventListener('click', () => {
-      document.querySelectorAll('.info-popup.open').forEach(p => p.classList.remove('open'));
-    });
-    </script>
-</body>
+        <script>
+            // ===== Info button (view details popup) =====
+            document.querySelectorAll('.info-btn').forEach((btn) => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const popup = btn.nextElementSibling;
+                    const isOpen = popup.classList.contains('open');
+
+                    document
+                        .querySelectorAll('.info-popup.open')
+                        .forEach((p) => p.classList.remove('open'));
+
+                    if (!isOpen) popup.classList.add('open');
+                });
+            });
+            document.addEventListener('click', () => {
+                document
+                    .querySelectorAll('.info-popup.open')
+                    .forEach((p) => p.classList.remove('open'));
+            });
+        </script>
+    </body>
 </html>

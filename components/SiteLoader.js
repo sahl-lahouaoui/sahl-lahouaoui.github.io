@@ -1,6 +1,6 @@
 class SiteLoader extends HTMLElement {
-  connectedCallback() {
-    this.innerHTML = `
+    connectedCallback() {
+        this.innerHTML = `
       <style>
       #loader {
   position: fixed;
@@ -26,12 +26,10 @@ class SiteLoader extends HTMLElement {
   <span><img src="images/logo/logo-monochrome.webp"></span>
 </div>
       `;
-  window.addEventListener("load", () => {
-  document.getElementById("loader").classList.add("hide");
-});
-  }
+        window.addEventListener('load', () => {
+            document.getElementById('loader').classList.add('hide');
+        });
+    }
 }
 
-customElements.define("site-loader", SiteLoader);
-
-
+customElements.define('site-loader', SiteLoader);

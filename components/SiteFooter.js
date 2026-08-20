@@ -1,6 +1,6 @@
 class SiteFooter extends HTMLElement {
-  connectedCallback() {
-    this.innerHTML = `
+    connectedCallback() {
+        this.innerHTML = `
       <style>
 
 .invisible-space {
@@ -477,12 +477,12 @@ class SiteFooter extends HTMLElement {
       </footer>
     `;
 
-    const year = this.querySelector(".footer-year");
+        const year = this.querySelector('.footer-year');
 
-    if (year) {
-      year.textContent = new Date().getFullYear();
+        if (year) {
+            year.textContent = new Date().getFullYear();
+        }
     }
-  }
 }
 
-customElements.define("site-footer", SiteFooter);
+customElements.define('site-footer', SiteFooter);

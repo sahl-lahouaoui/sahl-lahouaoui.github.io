@@ -1,7 +1,7 @@
-import { initTranslations, applyTranslation } from "./translations.js";
+import { initTranslations, applyTranslation } from './translations.js';
 class SiteHeader extends HTMLElement {
-  connectedCallback() {
-    this.innerHTML = `
+    connectedCallback() {
+        this.innerHTML = `
       <style>
       /* ===== HEADER ===== */
   .header {
@@ -350,61 +350,61 @@ class SiteHeader extends HTMLElement {
 </header>
     <div class="overlay" id="overlay"></div>
       `;
-      initTranslations();
-          // ===== Mobile menu =====
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const navLinks = document.getElementById('navLinks');
-    const menuOverlay = document.getElementById('overlay');
+        initTranslations();
+        // ===== Mobile menu =====
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const navLinks = document.getElementById('navLinks');
+        const menuOverlay = document.getElementById('overlay');
 
-    function toggleMenu() {
-      const isOpen = navLinks.classList.toggle('open');
-      hamburgerBtn.classList.toggle('active', isOpen);
-      menuOverlay.classList.toggle('open', isOpen);
-      hamburgerBtn.setAttribute('aria-expanded', isOpen);
+        function toggleMenu() {
+            const isOpen = navLinks.classList.toggle('open');
+            hamburgerBtn.classList.toggle('active', isOpen);
+            menuOverlay.classList.toggle('open', isOpen);
+            hamburgerBtn.setAttribute('aria-expanded', isOpen);
+        }
+
+        hamburgerBtn.addEventListener('click', toggleMenu);
+        menuOverlay.addEventListener('click', toggleMenu);
+
+        navLinks.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('open')) toggleMenu();
+            });
+        });
+
+        // ===== Language switcher =====
+        const langBtn = document.getElementById('langBtn');
+        const langLabel = document.getElementById('langLabel');
+        const langDropdown = document.getElementById('langDropdown');
+        const langOptions = langDropdown.querySelectorAll('button');
+
+        function closeLangDropdown() {
+            langDropdown.classList.remove('open');
+            langBtn.setAttribute('aria-expanded', 'false');
+        }
+
+        langBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = langDropdown.classList.toggle('open');
+            langBtn.setAttribute('aria-expanded', isOpen);
+        });
+
+        langOptions.forEach((option) => {
+            option.addEventListener('click', () => {
+                langLabel.textContent = option.dataset.lang;
+                langOptions.forEach((o) => o.classList.remove('active'));
+                option.classList.add('active');
+                closeLangDropdown();
+                applyTranslation(option.dataset.lang);
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!langDropdown.contains(e.target) && e.target !== langBtn) {
+                closeLangDropdown();
+            }
+        });
     }
-
-    hamburgerBtn.addEventListener('click', toggleMenu);
-    menuOverlay.addEventListener('click', toggleMenu);
-
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        if (navLinks.classList.contains('open')) toggleMenu();
-      });
-    });
-      
-          // ===== Language switcher =====
-    const langBtn = document.getElementById('langBtn');
-    const langLabel = document.getElementById('langLabel');
-    const langDropdown = document.getElementById('langDropdown');
-    const langOptions = langDropdown.querySelectorAll('button');
-
-    function closeLangDropdown() {
-      langDropdown.classList.remove('open');
-      langBtn.setAttribute('aria-expanded', 'false');
-    }
-
-    langBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const isOpen = langDropdown.classList.toggle('open');
-      langBtn.setAttribute('aria-expanded', isOpen);
-    });
-
-    langOptions.forEach(option => {
-      option.addEventListener('click', () => {
-        langLabel.textContent = option.dataset.lang;
-        langOptions.forEach(o => o.classList.remove('active'));
-        option.classList.add('active');
-        closeLangDropdown();
-        applyTranslation(option.dataset.lang);
-      });
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!langDropdown.contains(e.target) && e.target !== langBtn) {
-        closeLangDropdown();
-      }
-    });
-  }
 }
 
-customElements.define("site-header", SiteHeader);
+customElements.define('site-header', SiteHeader);

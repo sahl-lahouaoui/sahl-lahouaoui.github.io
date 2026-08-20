@@ -1,270 +1,356 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Sahl Lahouaoui">
-  <meta name="author" content="Sahl Lahouaoui">
-  <meta name="theme-color" content="var(--black)">
-  <link rel="icon" href="images/logo/logo-favicon.webp">
-  <meta property="og:title" content="Sahl Portfolio">
-  <meta property="og:image" content="images/logo/preview.webp">
-  <meta property="og:type" content="website">
-  <link rel="stylesheet" href="styles/photography-style.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&d splay=swap" rel="stylesheet">
-<title>photography - sahl</title>
-</head>
-<body>
-  <site-loader></site-loader>
-  <script type="module" src="components/SiteLoader.js"></script>
+    <head>
+        <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Portfolio of Sahl Lahouaoui" />
+        <meta name="author" content="Sahl Lahouaoui" />
+        <meta name="theme-color" content="var(--black)" />
+        <link rel="icon" href="images/logo/logo-favicon.webp" />
+        <meta property="og:title" content="Sahl Portfolio" />
+        <meta property="og:image" content="images/logo/preview.webp" />
+        <meta property="og:type" content="website" />
+        <link rel="stylesheet" href="styles/photography-style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&dsplay=swap"
+            rel="stylesheet"
+        />
+        <title>photography - sahl</title>
+    </head>
+    <body>
+        <site-loader></site-loader>
+        <script type="module" src="components/SiteLoader.js"></script>
 
-  <site-theme></site-theme>
-  <site-header></site-header>
-  <protected-img></protected-img>
-  <zoomable-photos></zoomable-photos>
-  
-  
-    <div class="zoom-hint" id="zoomHint">
-  <div class="zoom-hint-content">
-    <button class="zoom-hint-close" id="zoomHintClose" aria-label="إغلاق">&#10005;</button>
-    <div class="zoom-hint-top">
-      <div class="zoom-hint-icon">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="11" cy="11" r="7"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
-      </div>
-      <div class="zoom-hint-text">
-        <strong data-i18n="zoom_hint_title">Zoom Tip</strong>
-        <p data-i18n="zoom_hint">Tap any photo to zoom in</p>
-      </div>
-    </div>
-  </div>
-</div>
+        <site-theme></site-theme>
+        <site-header></site-header>
+        <protected-img></protected-img>
+        <zoomable-photos></zoomable-photos>
 
-   
+        <div class="zoom-hint" id="zoomHint">
+            <div class="zoom-hint-content">
+                <button class="zoom-hint-close" id="zoomHintClose" aria-label="إغلاق">
+                    &#10005;
+                </button>
+                <div class="zoom-hint-top">
+                    <div class="zoom-hint-icon">
+                        <svg
+                            viewBox="0 0 24 24"
+                            width="16"
+                            height="16"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <circle cx="11" cy="11" r="7"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </div>
+                    <div class="zoom-hint-text">
+                        <strong data-i18n="zoom_hint_title">Zoom Tip</strong>
+                        <p data-i18n="zoom_hint">Tap any photo to zoom in</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <section class="black-white">
-      <h1 class="black-white-titel" data-i18n="black_white_titel">Black & White</h1>
-      <div class="dabab-photos" >
-        <div class="dabab1">
-          <img src="images/photography/BW2.webp" class="zoomable protected">
-          <button class="info-btn" data-i18n="info_icon">View Details</button>
-          <div class="info-popup">
-            <button class="info-popup-close">&#10005;</button>
-            <pre data-i18n="view_info1">Description:
+        <section class="black-white">
+            <h1 class="black-white-titel" data-i18n="black_white_titel">Black & White</h1>
+            <div class="dabab-photos">
+                <div class="dabab1">
+                    <img src="images/photography/BW2.webp" class="zoomable protected" />
+                    <button class="info-btn" data-i18n="info_icon">View Details</button>
+                    <div class="info-popup">
+                        <button class="info-popup-close">&#10005;</button>
+                        <pre data-i18n="view_info1">
+Description:
 This photograph captures the silhouette of plants seen through a fogged glass surface, creating a soft, mysterious atmosphere where light and shadow blend together.
 Camera: iPhone 12
-Edited with: Adobe Lightroom</pre>
-          </div>
-        </div>
+Edited with: Adobe Lightroom</pre
+                        >
+                    </div>
+                </div>
 
-        <div class="dabab2">
-          <img src="images/photography/BW1.webp" class="zoomable protected">
-          <button class="info-btn" data-i18n="info_icon">View Details</button>
-          <div class="info-popup">
-            <button class="info-popup-close">&#10005;</button>
-            <pre data-i18n="view_info1">Description:
+                <div class="dabab2">
+                    <img src="images/photography/BW1.webp" class="zoomable protected" />
+                    <button class="info-btn" data-i18n="info_icon">View Details</button>
+                    <div class="info-popup">
+                        <button class="info-popup-close">&#10005;</button>
+                        <pre data-i18n="view_info1">
+Description:
 This photograph captures the silhouette of plants seen through a fogged glass surface, creating a soft, mysterious atmosphere where light and shadow blend together.
 Camera: iPhone 12
-Edited with: Adobe Lightroom</pre>
-          </div>
-        </div>
+Edited with: Adobe Lightroom</pre
+                        >
+                    </div>
+                </div>
 
-        <div class="dabab3">
-          <img src="images/photography/BW3.webp" class="zoomable protected">
-          <button class="info-btn" data-i18n="info_icon">View Details</button>
-          <div class="info-popup">
-            <button class="info-popup-close">&#10005;</button>
-            <pre data-i18n="view_info2">Camera: infinix smart 8
-Edited with: Adobe Lightroom</pre>
-          </div>
-        </div>
-      </div>
-    </section>
+                <div class="dabab3">
+                    <img src="images/photography/BW3.webp" class="zoomable protected" />
+                    <button class="info-btn" data-i18n="info_icon">View Details</button>
+                    <div class="info-popup">
+                        <button class="info-popup-close">&#10005;</button>
+                        <pre data-i18n="view_info2">
+Camera: infinix smart 8
+Edited with: Adobe Lightroom</pre
+                        >
+                    </div>
+                </div>
 
-    <section class="black-yellow">
-      <h1 class="BY-titel" data-i18n="BY_titel">Black & <span class="yellow"> Yellow</span> </h1>
-        <div class="BY-photos" >
-
-          <div class="BY1">
-            <img src="images/photography/BY1.webp" class="zoomable protected" loading="lazy">
-            <button class="info-btn" data-i18n="info_icon">View Details</button>
-            <div class="info-popup">
-              <button class="info-popup-close">&#10005;</button>
-              <pre data-i18n="view_info_BY1">camera: iPhone 16
+                <!--  <div class="BW4">
+                    <img src="images/photography/BW4.webp" class="zoomable protected" />
+                    <button class="info-btn" data-i18n="info_icon">View Details</button>
+                    <div class="info-popup">
+                        <button class="info-popup-close">&#10005;</button>
+                        <pre data-i18n="view_info_BY1">
+camera: iPhone 16
 Editing: Adobe Lightroom</pre>
+                    </div>
+                </div>-->
             </div>
-          </div>
+        </section>
 
-          <div class="BY2">
-            <img src="images/photography/BY2.webp" class="zoomable protected" loading="lazy">
-            <button class="info-btn" data-i18n="info_icon">View Details</button>
-            <div class="info-popup">
-              <button class="info-popup-close">&#10005;</button>
-              <pre data-i18n="view_info_BY2">camera: iPhone 16
-Editing: Adobe Lightroom</pre>
-            </div>
-          </div>
-
-          <div class="BY3">
-            <img src="images/photography/BY3.webp" class="zoomable protected" loading="lazy">
-            <button class="info-btn" data-i18n="info_icon">View Details</button>
-            <div class="info-popup">
-              <button class="info-popup-close">&#10005;</button>
-              <pre data-i18n="view_info_BY3">camera: iPhone 16
-Editing: Adobe Lightroom</pre>
-            </div>
-          </div>
-
+        <div class="wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,40 C360,120 1080,-40 1440,40 L1440,120 L0,120 Z"></path>
+            </svg>
         </div>
-    </section>
+        <section class="black-yellow">
+            <h1 class="BY-titel" data-i18n="BY_titel">Black & Yellow</h1>
+            <div class="BY-photos">
+                <div class="BY1">
+                    <img
+                        src="images/photography/BY1.webp"
+                        class="zoomable protected"
+                        loading="lazy"
+                    />
+                    <button class="info-btn" data-i18n="info_icon">View Details</button>
+                    <div class="info-popup">
+                        <button class="info-popup-close">&#10005;</button>
+                        <pre data-i18n="view_info_BY1">
+camera: iPhone 16
+Editing: Adobe Lightroom</pre
+                        >
+                    </div>
+                </div>
 
-    <section class="colored">
-     <h1 class="colored-titel" data-i18n="colored_titel">Colored</h1>
-      <div class="colored-photos" >
+                <div class="BY2">
+                    <img
+                        src="images/photography/BY2.webp"
+                        class="zoomable protected"
+                        loading="lazy"
+                    />
+                    <button class="info-btn" data-i18n="info_icon">View Details</button>
+                    <div class="info-popup">
+                        <button class="info-popup-close">&#10005;</button>
+                        <pre data-i18n="view_info_BY2">
+camera: iPhone 16
+Editing: Adobe Lightroom</pre
+                        >
+                    </div>
+                </div>
 
-        <div class="cat">
-          <img src="images/photography/cat.webp" class="zoomable protected" loading="lazy">
-          <button class="info-btn" data-i18n="info_icon">View Details</button>
-          <div class="info-popup">
-            <button class="info-popup-close">&#10005;</button>
-            <pre data-i18n="view_info_C1">camera: iPhone 16
-Editing: Adobe Lightroom</pre>
-          </div>
-        </div>
-
-          <div class="cat2">
-            <img src="images/photography/mom cat.webp" class="zoomable protected" loading="lazy">
-            <button class="info-btn" data-i18n="info_icon">View Details</button>
-            <div class="info-popup">
-              <button class="info-popup-close">&#10005;</button>
-              <pre data-i18n="view_info_C2">Camera: iPhone 12
-Edited with: Unedited Photo</pre>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="colored">
-      <div class="colored-photos" >
-
-          <div class="car-toy">
-            <img src="images/photography/toy car.webp" class="zoomable protected" loading="lazy">
-            <button class="info-btn" data-i18n="info_icon">View Details</button>
-            <div class="info-popup">
-              <button class="info-popup-close">&#10005;</button>
-              <pre data-i18n="view_info_C4">Camera: iPhone 16
-Edited with: Unedited Photo</pre>
+                <div class="BY3">
+                    <img
+                        src="images/photography/BY3.webp"
+                        class="zoomable protected"
+                        loading="lazy"
+                    />
+                    <button class="info-btn" data-i18n="info_icon">View Details</button>
+                    <div class="info-popup">
+                        <button class="info-popup-close">&#10005;</button>
+                        <pre data-i18n="view_info_BY3">
+camera: iPhone 16
+Editing: Adobe Lightroom</pre
+                        >
+                    </div>
+                </div>
             </div>
-          </div>
+        </section>
 
-          <div class="car">
-            <img src="images/photography/car.webp" class="zoomable protected" loading="lazy">
-            <button class="info-btn" data-i18n="info_icon">View Details</button>
-            <div class="info-popup">
-              <button class="info-popup-close">&#10005;</button>
-              <pre data-i18n="view_info_C1">Camera: iPhone 16
-Edited with: Adobe Lightroom</pre>
+        <section class="colored">
+            <h1 class="colored-titel" data-i18n="colored_titel">Colored</h1>
+            <div class="colored-photos">
+                <div class="cat">
+                    <img
+                        src="images/photography/cat.webp"
+                        class="zoomable protected"
+                        loading="lazy"
+                    />
+                    <button class="info-btn" data-i18n="info_icon">View Details</button>
+                    <div class="info-popup">
+                        <button class="info-popup-close">&#10005;</button>
+                        <pre data-i18n="view_info_C1">
+camera: iPhone 16
+Editing: Adobe Lightroom</pre
+                        >
+                    </div>
+                </div>
+
+                <div class="cat2">
+                    <img
+                        src="images/photography/mom cat.webp"
+                        class="zoomable protected"
+                        loading="lazy"
+                    />
+                    <button class="info-btn" data-i18n="info_icon">View Details</button>
+                    <div class="info-popup">
+                        <button class="info-popup-close">&#10005;</button>
+                        <pre data-i18n="view_info_C2">
+Camera: iPhone 12
+Edited with: Unedited Photo</pre
+                        >
+                    </div>
+                </div>
             </div>
-          </div>
+        </section>
+        <section class="colored">
+            <div class="colored-photos">
+                <div class="car-toy">
+                    <img
+                        src="images/photography/toy car.webp"
+                        class="zoomable protected"
+                        loading="lazy"
+                    />
+                    <button class="info-btn" data-i18n="info_icon">View Details</button>
+                    <div class="info-popup">
+                        <button class="info-popup-close">&#10005;</button>
+                        <pre data-i18n="view_info_C4">
+Camera: iPhone 16
+Edited with: Unedited Photo</pre
+                        >
+                    </div>
+                </div>
 
-          <div class="bee">
-            <img src="images/photography/bee.webp" class="zoomable protected" loading="lazy">
-            <button class="info-btn" data-i18n="info_icon">View Details</button>
-            <div class="info-popup">
-              <button class="info-popup-close">&#10005;</button>
-              <pre data-i18n="view_info_C1">Camera: iPhone 16
-Edited with: Adobe Lightroom</pre>
+                <div class="car">
+                    <img
+                        src="images/photography/car.webp"
+                        class="zoomable protected"
+                        loading="lazy"
+                    />
+                    <button class="info-btn" data-i18n="info_icon">View Details</button>
+                    <div class="info-popup">
+                        <button class="info-popup-close">&#10005;</button>
+                        <pre data-i18n="view_info_C1">
+Camera: iPhone 16
+Edited with: Adobe Lightroom</pre
+                        >
+                    </div>
+                </div>
+
+                <div class="bee">
+                    <img
+                        src="images/photography/bee.webp"
+                        class="zoomable protected"
+                        loading="lazy"
+                    />
+                    <button class="info-btn" data-i18n="info_icon">View Details</button>
+                    <div class="info-popup">
+                        <button class="info-popup-close">&#10005;</button>
+                        <pre data-i18n="view_info_C1">
+Camera: iPhone 16
+Edited with: Adobe Lightroom</pre
+                        >
+                    </div>
+                </div>
+
+                <div class="jidar">
+                    <img
+                        src="images/photography/jidar.webp"
+                        class="zoomable protected"
+                        loading="lazy"
+                    />
+                    <button class="info-btn" data-i18n="info_icon">View Details</button>
+                    <div class="info-popup">
+                        <button class="info-popup-close">&#10005;</button>
+                        <pre data-i18n="view_info_C2">
+Camera: iPhone 12
+Edited with: Unedited Photo</pre
+                        >
+                    </div>
+                </div>
             </div>
-          </div>
-        
-        <div class="jidar">
-            <img src="images/photography/jidar.webp" class="zoomable protected" loading="lazy">
-            <button class="info-btn" data-i18n="info_icon">View Details</button>
-            <div class="info-popup">
-              <button class="info-popup-close">&#10005;</button>
-              <pre data-i18n="view_info_C2">Camera: iPhone 12
-Edited with: Unedited Photo</pre>
+        </section>
+        <section class="colored">
+            <div class="colored-photos">
+                <div class="midala">
+                    <img
+                        src="images/photography/midala.webp"
+                        class="zoomable protected"
+                        loading="lazy"
+                    />
+                    <button class="info-btn" data-i18n="info_icon">View Details</button>
+                    <div class="info-popup">
+                        <button class="info-popup-close">&#10005;</button>
+                        <pre data-i18n="view_info_C1">
+Camera: iPhone 16
+Edited with: Adobe Lightroom</pre
+                        >
+                    </div>
+                </div>
             </div>
-        </div>
-      </div>
-    </section>
-    <section class="colored">
-      <div class="colored-photos" >
+        </section>
 
-        <div class="midala">
-            <img src="images/photography/midala.webp" class="zoomable protected" loading="lazy">
-            <button class="info-btn" data-i18n="info_icon">View Details</button>
-            <div class="info-popup">
-              <button class="info-popup-close">&#10005;</button>
-              <pre data-i18n="view_info_C1">Camera: iPhone 16
-Edited with: Adobe Lightroom</pre>
-            </div>
-        </div>
-      </div>
-    </section>
+        <site-footer></site-footer>
+        <script type="module" src="components/SiteFooter.js"></script>
+        <script type="module" src="components/SiteHeader.js"></script>
+        <script type="module" src="components/Zoomable.js"></script>
+        <script type="module" src="components/ProtectedImg.js"></script>
+        <script type="module" src="components/Theme.js"></script>
 
-  
+        <script>
+            // ===== Zoom hint: shown only on the user's first visit =====
+            const zoomHint = document.getElementById('zoomHint');
+            const zoomHintClose = document.getElementById('zoomHintClose');
+            const targetPhoto = document.querySelector('.dabab2 .zoomable');
 
-<site-footer></site-footer>
-<script type="module" src="components/SiteFooter.js"></script>
-<script type="module" src="components/SiteHeader.js"></script>
-<script type="module" src="components/Zoomable.js"></script><!-- class="zoomable" -->
-<script type="module" src="components/ProtectedImg.js"></script><!-- class="protected" -->
-<script type="module" src="components/Theme.js"></script>
+            let autoHideTimer;
 
+            function dismissZoomHint() {
+                zoomHint.classList.remove('show');
+                clearTimeout(autoHideTimer);
+                localStorage.setItem('zoomHintSeen', '1');
+            }
 
+            if (!localStorage.getItem('zoomHintSeen') && targetPhoto) {
+                targetPhoto.classList.add('first-photo');
+                targetPhoto.parentElement.style.position = 'relative';
+                targetPhoto.parentElement.insertBefore(zoomHint, targetPhoto.nextSibling);
 
-  <script>
-    // ===== Zoom hint: shown only on the user's first visit =====
-    const zoomHint = document.getElementById('zoomHint');
-    const zoomHintClose = document.getElementById('zoomHintClose');
-    const targetPhoto = document.querySelector('.dabab2 .zoomable');
+                setTimeout(() => {
+                    zoomHint.classList.add('show');
+                    autoHideTimer = setTimeout(dismissZoomHint, 6000);
+                }, 700);
+            } else if (zoomHint) {
+                zoomHint.remove();
+            }
 
-    let autoHideTimer;
+            zoomHintClose.addEventListener('click', dismissZoomHint);
 
-    function dismissZoomHint() {
-      zoomHint.classList.remove('show');
-      clearTimeout(autoHideTimer);
-      localStorage.setItem('zoomHintSeen', '1');
-    }
+            document.querySelectorAll('.zoomable').forEach((img) => {
+                img.addEventListener('click', dismissZoomHint, { once: true });
+            });
 
-    if (!localStorage.getItem('zoomHintSeen') && targetPhoto) {
-      targetPhoto.classList.add('first-photo');
-      targetPhoto.parentElement.style.position = 'relative';
-      targetPhoto.parentElement.insertBefore(zoomHint, targetPhoto.nextSibling);
+            // ===== Info button (view details popup) =====
+            document.querySelectorAll('.info-btn').forEach((btn) => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const popup = btn.nextElementSibling;
+                    const isOpen = popup.classList.contains('open');
 
-      setTimeout(() => {
-        zoomHint.classList.add('show');
-        autoHideTimer = setTimeout(dismissZoomHint, 6000);
-      }, 700);
-    } else if (zoomHint) {
-      zoomHint.remove();
-    }
+                    document
+                        .querySelectorAll('.info-popup.open')
+                        .forEach((p) => p.classList.remove('open'));
 
-    zoomHintClose.addEventListener('click', dismissZoomHint);
-
-    document.querySelectorAll('.zoomable').forEach(img => {
-      img.addEventListener('click', dismissZoomHint, { once: true });
-    });
-
-    // ===== Info button (view details popup) =====
-    document.querySelectorAll('.info-btn').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const popup = btn.nextElementSibling;
-        const isOpen = popup.classList.contains('open');
-
-        document.querySelectorAll('.info-popup.open').forEach(p => p.classList.remove('open'));
-
-        if (!isOpen) popup.classList.add('open');
-      });
-    });
-  document.addEventListener('click', () => {
-      document.querySelectorAll('.info-popup.open').forEach(p => p.classList.remove('open'));
-    });
-  </script>
-</body>
+                    if (!isOpen) popup.classList.add('open');
+                });
+            });
+            document.addEventListener('click', () => {
+                document
+                    .querySelectorAll('.info-popup.open')
+                    .forEach((p) => p.classList.remove('open'));
+            });
+        </script>
+    </body>
 </html>

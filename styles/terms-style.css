@@ -1,79 +1,79 @@
 /* ===== TERMS & CONDITIONS PAGE ===== */
 
 .terms-section {
-background: var(--white);
-padding: 70px 20px 90px;
+    background: var(--white);
+    padding: 70px 20px 90px;
 }
 
 .terms-wrapper {
-max-width: 760px;
-margin: 0 auto;
+    max-width: 760px;
+    margin: 0 auto;
 }
 
 .terms-head {
-text-align: center;
-margin-bottom: 50px;
-padding-bottom: 30px;
-border-bottom: 1px solid rgba(91, 58, 34, 0.15);
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(91, 58, 34, 0.15);
 }
 
 .terms-title {
-font-family: 'Space Grotesk', sans-serif;
-font-size: clamp(2rem, 5vw, 2.6rem);
-font-weight: 600;
-color: var(--black);
-margin-bottom: 10px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2rem, 5vw, 2.6rem);
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 10px;
 }
 
 .terms-updated {
-font-family: 'Manrope', sans-serif;
-font-size: 0.9rem;
-color: rgba(0, 0, 0, 0.5);
-letter-spacing: 0.3px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.3px;
 }
 
 .terms-body {
-display: flex;
-flex-direction: column;
-gap: 34px;
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
 }
 
 .terms-item h2 {
-font-family: 'Space Grotesk', sans-serif;
-font-size: 1.15rem;
-font-weight: 600;
-color: #5B3A22;
-margin-bottom: 10px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #5b3a22;
+    margin-bottom: 10px;
 }
 
 .terms-item p {
-font-family: 'Manrope', sans-serif;
-font-size: 0.95rem;
-line-height: 1.75;
-color: rgba(26, 26, 26, 0.8);
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: rgba(26, 26, 26, 0.8);
 }
 
 /* RTL adjustments for Arabic */
 .terms-head.ar-text,
 .terms-item.ar-text {
-text-align: right;
+    text-align: right;
 }
 
-html[lang="ar"] .terms-title,
-html[lang="ar"] .terms-updated,
-html[lang="ar"] .terms-item h2,
-html[lang="ar"] .terms-item p {
-text-align: right;
+html[lang='ar'] .terms-title,
+html[lang='ar'] .terms-updated,
+html[lang='ar'] .terms-item h2,
+html[lang='ar'] .terms-item p {
+    text-align: right;
 }
 
 @media (max-width: 768px) {
-.terms-section {
-padding: 50px 16px 70px;
-}
-.terms-item h2 {
-font-size: 1.05rem;
-}
-.terms-item p {
-font-size: 0.9rem;
-}
+    .terms-section {
+        padding: 50px 16px 70px;
+    }
+    .terms-item h2 {
+        font-size: 1.05rem;
+    }
+    .terms-item p {
+        font-size: 0.9rem;
+    }
 }
