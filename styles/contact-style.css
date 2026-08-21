@@ -10,7 +10,7 @@
 
     font-weight: 500;
     line-height: 1.1;
-    
+
     color: var(--green);
 }
 
@@ -35,7 +35,6 @@
     align-items: center;
 }
 
-
 /* ========================================
    FORM GROUPS
 ======================================== */
@@ -49,7 +48,6 @@
     margin-bottom: 42px;
 }
 
-
 /* ========================================
    FORM TITLES
 ======================================== */
@@ -57,7 +55,7 @@
 .name label,
 .email label,
 .reason label,
-.message label{
+.message label {
     font-size: clamp(28px, 4vw, 40px);
 
     font-weight: 500;
@@ -81,7 +79,6 @@
 
     line-height: 1.1;
 }
-
 
 /* ========================================
    INPUTS & TEXTAREA
@@ -116,7 +113,6 @@
         padding-left 0.3s ease;
 }
 
-
 /* TEXTAREA */
 
 .template textarea {
@@ -125,14 +121,12 @@
     resize: vertical;
 }
 
-
 /* INPUT FOCUS */
 
 .template input:focus,
 .template textarea:focus {
     border-bottom-color: var(--black);
 }
-
 
 /* ========================================
    PRIVACY CONSENT
@@ -163,7 +157,6 @@
 
     cursor: pointer;
 }
-
 
 /* CHECKBOX */
 
@@ -196,7 +189,6 @@
         border-color 0.2s ease;
 }
 
-
 /* CHECKED */
 
 .privacy-consent input:checked {
@@ -204,7 +196,6 @@
 
     border-color: var(--green);
 }
-
 
 /* CHECKMARK */
 
@@ -226,7 +217,6 @@
     font-weight: 700;
 }
 
-
 /* CHECKBOX FOCUS */
 
 .privacy-consent input:focus-visible {
@@ -235,13 +225,11 @@
     outline-offset: 3px;
 }
 
-
 /* TEXT */
 
 .privacy-consent span {
     cursor: pointer;
 }
-
 
 /* ========================================
    SUBMIT BUTTON
@@ -276,8 +264,7 @@
 
     font-weight: 600;
 
-    box-shadow:
-        0 4px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 
     cursor: pointer;
 
@@ -286,7 +273,6 @@
         box-shadow 0.2s ease,
         filter 0.2s ease;
 }
-
 
 /* BUTTON ARROW */
 
@@ -299,10 +285,8 @@
 
     flex-shrink: 0;
 
-    transition:
-        transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
-
 
 /* SVG */
 
@@ -312,13 +296,11 @@
     height: 100%;
 }
 
-
 /* HOVER */
 
 .submit-button:hover {
     filter: brightness(1.1);
 }
-
 
 /* ARROW HOVER */
 
@@ -326,14 +308,12 @@
     transform: translateX(6px);
 }
 
-
 /* ACTIVE */
 
 .submit-button:active {
     transform: translateY(3px);
 
-    box-shadow:
-        0 1px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
 
     filter: brightness(0.95);
 }
@@ -363,10 +343,9 @@
     border-color: var(--green);
 
     color: var(--green);
-    
+
     filter: brightness(-10%);
 }
-
 
 /* ========================================
    AUTOFILL
@@ -375,34 +354,24 @@
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
-    -webkit-box-shadow:
-        0 0 0px 1000px #fff inset !important;
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
 
-    -webkit-text-fill-color:
-        #000 !important;
+    -webkit-text-fill-color: #000 !important;
 
-    transition:
-        background-color 5000s ease-in-out 0s;
+    transition: background-color 5000s ease-in-out 0s;
 }
-
 
 input:-webkit-autofill:valid {
-    -webkit-box-shadow:
-        0 0 0px 1000px rgb(0 0 0 /0%) inset !important;
+    -webkit-box-shadow: 0 0 0px 1000px rgb(0 0 0 /0%) inset !important;
 
-    -webkit-text-fill-color:
-        var(--green) !important;
+    -webkit-text-fill-color: var(--green) !important;
 }
-
 
 input:-webkit-autofill:invalid {
-    -webkit-box-shadow:
-        0 0 0px 1000px var(--red) inset !important;
+    -webkit-box-shadow: 0 0 0px 1000px var(--red) inset !important;
 
-    -webkit-text-fill-color:
-        var(--red) !important;
+    -webkit-text-fill-color: var(--red) !important;
 }
-
 
 /* ========================================
    REQUIRED ERROR
@@ -415,16 +384,14 @@ input:-webkit-autofill:invalid {
     position: relative;
 }
 
-
 .reason.required-error label::after,
 .message.required-error label::after,
 .email.required-error label::after,
 .name.required-error label::after {
-    content: " *";
+    content: ' *';
 
     color: var(--red);
 }
-
 
 /* ========================================
    HONEYPOT
@@ -443,7 +410,6 @@ input:-webkit-autofill:invalid {
 
     pointer-events: none;
 }
-
 
 /* ========================================
    FORM STATUS
@@ -471,23 +437,19 @@ input:-webkit-autofill:invalid {
         transform 0.3s ease;
 }
 
-
 .form-status.show {
     opacity: 1;
 
     transform: translateY(0);
 }
 
-
 .form-status.success {
     color: green;
 }
 
-
 .form-status.error {
     color: red;
 }
-
 
 /* ========================================
    DIRECT CONTACT
@@ -505,7 +467,6 @@ input:-webkit-autofill:invalid {
     margin: 50px 20px 20px;
 }
 
-
 .direct-contact-text {
     font-family: 'Plus Jakarta Sans', sans-serif;
 
@@ -522,7 +483,6 @@ input:-webkit-autofill:invalid {
     max-width: 500px;
 }
 
-
 .email-link {
     display: inline-block;
 
@@ -536,16 +496,13 @@ input:-webkit-autofill:invalid {
 
     border-bottom: 1.5px solid var(--black);
 
-    transition:
-        opacity 0.2s ease;
+    transition: opacity 0.2s ease;
 }
-
 
 .email-link:hover {
     border-bottom: 1.5px solid var(--orange);
     color: var(--orange);
 }
-
 
 /* ========================================
    SOCIAL MEDIA
@@ -560,7 +517,6 @@ input:-webkit-autofill:invalid {
 
     justify-content: center;
 }
-
 
 .social-btn {
     display: flex;
@@ -591,7 +547,6 @@ input:-webkit-autofill:invalid {
         transform 0.2s ease;
 }
 
-
 .social-btn svg {
     width: 20px;
 
@@ -600,17 +555,15 @@ input:-webkit-autofill:invalid {
     flex-shrink: 0;
 }
 
-
 .social-btn:hover {
     background-color: var(--orange);
 
     color: var(--white);
-    
+
     border: 1px solid rgb(0 0 0 / 0%);
 
     transform: translateY(-2px);
 }
-
 
 /* ========================================
    "OR FIND ME ON"
@@ -622,13 +575,11 @@ input:-webkit-autofill:invalid {
     color: var(--green);
 }
 
-
 /* ========================================
    MOBILE
 ======================================== */
 
 @media (max-width: 600px) {
-
     /* TITLE */
 
     .contact-title {
@@ -636,20 +587,14 @@ input:-webkit-autofill:invalid {
 
         margin-bottom: 65px;
 
-        font-size: clamp(
-            40px,
-            11vw,
-            52px
-        );
+        font-size: clamp(40px, 11vw, 52px);
     }
-
 
     /* FORM */
 
     .template {
         width: calc(100% - 40px);
     }
-
 
     /* GROUPS */
 
@@ -660,7 +605,6 @@ input:-webkit-autofill:invalid {
         margin-bottom: 38px;
     }
 
-
     /* HEADINGS */
 
     .reason h2,
@@ -670,18 +614,15 @@ input:-webkit-autofill:invalid {
         font-size: 29px;
     }
 
-
     .name h2 {
         font-size: 36px;
     }
-
 
     .message h1 {
         font-size: 34px;
 
         margin-bottom: 32px;
     }
-
 
     /* INPUTS */
 
@@ -690,7 +631,6 @@ input:-webkit-autofill:invalid {
         font-size: 17px;
     }
 
-
     /* PRIVACY */
 
     .privacy-consent {
@@ -698,7 +638,6 @@ input:-webkit-autofill:invalid {
 
         font-size: 13px;
     }
-
 
     /* BUTTON */
 
@@ -711,13 +650,13 @@ input:-webkit-autofill:invalid {
 
         height: 62px;
     }
-    
+
     .p-submit {
         max-width: 300px;
-        
+
         min-width: 0;
     }
-    
+
     /* DIRECT CONTACT */
 
     .direct-contact {
@@ -725,13 +664,11 @@ input:-webkit-autofill:invalid {
     }
 }
 
-
 /* ========================================
    VERY SMALL PHONES
 ======================================== */
 
 @media (max-width: 380px) {
-
     .contact-title {
         margin-left: 16px;
 
@@ -740,11 +677,9 @@ input:-webkit-autofill:invalid {
         font-size: 38px;
     }
 
-
     .template {
         width: calc(100% - 32px);
     }
-
 
     .reason h2,
     .message h2,
@@ -753,16 +688,13 @@ input:-webkit-autofill:invalid {
         font-size: 27px;
     }
 
-
     .name h2 {
         font-size: 34px;
     }
 
-
     .message h1 {
         font-size: 31px;
     }
-
 
     .social-btn {
         padding: 12px 18px;
@@ -781,5 +713,4 @@ input:-webkit-autofill:invalid {
     height: auto;
     transform: translateY(-30px) scaleX(-1);
     filter: drop-shadow(0 10px 10px rgba(250, 250, 250, 0.2));
-    
 }
