@@ -9,24 +9,22 @@ const form = document.getElementById("contact-form");
 form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    if (honeypot.value.trim() !== "") {
-        return;
-    }
-
-    
     emailjs
         .sendForm(
             "service_2pdjr0m",
-            "template_yaom5pe",
+            "template_s49qyci",
             form
         )
-        .then(function () {
+        .then(() => {
             alert("Message sent successfully!");
             form.reset();
         })
-        .catch(function (error) {
-            console.error("EmailJS ERROR:", error);
-            alert("Something went wrong. Please try again.");
+        .catch((error) => {
+            console.error("EmailJS error:", error);
+
+            alert(
+                "Error: " +
+                (error.text || error.message || JSON.stringify(error))
+            );
         });
 });
-

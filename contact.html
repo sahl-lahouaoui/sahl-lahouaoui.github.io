@@ -13,12 +13,12 @@
         <meta property="og:type" content="website" />
         <link rel="stylesheet" href="styles/contact-style.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&family=Sora:wght@100..800&display=swap"
-/>
-        <meta name="color-scheme" content="light">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&family=Sora:wght@100..800&display=swap"
+        />
+
         <title>contact - Sahl</title>
     </head>
     <body>
@@ -27,183 +27,211 @@
 
         <h1 class="contact-title">Get in touch with me.</h1>
 
-<section class="template">
-    <form id="contact-form">
+        <section class="template">
+            <form id="contact-form">
+                <div class="name">
+                    <h2>Hi, I’m</h2>
+                    <input type="text" name="name" placeholder="What's your name?" required />
+                </div>
 
-        <div class="name">
-            <h2>Hi, I’m</h2>
-            <input
-                type="text"
-                name="name"
-                placeholder="What's your name?"
-                required
-            />
-        </div>
-
-        <div class="email">
-            <h2>Where can I reach you?</h2>
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="What's your email address?"
-                required
-            />
-        </div>
-
-        <div class="reason">
-            <h2>What brings you here?</h2>
-            <input
-                type="text"
-                name="reason"
-                placeholder="What's this about?"
-                required
-            />
-        </div>
-
-        <div class="message">
-            <h1>And let’s talk.</h1>
-            <h2>What would you like to share?</h2>
-
-            <textarea
-                name="message"
-                placeholder="Tell me a little more..."
-                required
-            ></textarea>
-        </div>
-
-        
-        <label class="privacy-consent">
-            <input
-                type="checkbox"
-                name="privacy_consent"
-                value="I agree"
-                required
-            />
-            <span>
-                I agree to share my information so you can reply to me.
-            </span>
-        </label>
-
-        <button type="submit" class="submit-button">
-            <span data-i18n="send_message">send message</span>
-
-            <span class="arrow">
-                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                    <path
-                        d="M3.125 10H16.875"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                <div class="email">
+                    <h2>Where can I reach you?</h2>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="What's your email address?"
+                        required
                     />
-                    <path
-                        d="M11.25 4.375L16.875 10L11.25 15.625"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    />
-                </svg>
-            </span>
-            <span class="spinner"></span>
-        </button>
-<div class="form-status" aria-live="polite"></div>
-        <input
-    type="text"
-    name="website"
-    class="honeypot"
-            id="honeypot"
-    tabindex="-1"
-    autocomplete="off"
-    aria-hidden="true"
-/>
-    </form>
-</section>
+                </div>
+
+                <div class="reason">
+                    <h2>What brings you here?</h2>
+                    <input type="text" name="reason" placeholder="What's this about?" required />
+                </div>
+
+                <div class="message">
+                    <h1>And let’s talk.</h1>
+                    <h2>What would you like to share?</h2>
+
+                    <textarea
+                        name="message"
+                        placeholder="Tell me a little more..."
+                        required
+                    ></textarea>
+                </div>
+
+                <label class="privacy-consent">
+                    <input type="checkbox" name="privacy_consent" value="I agree" required />
+                    <span> I agree to share my information so you can reply to me. </span>
+                </label>
+
+                <button type="submit" class="submit-button">
+                    <span data-i18n="send_message">send message</span>
+
+                    <span class="arrow">
+                        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                            <path
+                                d="M3.125 10H16.875"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M11.25 4.375L16.875 10L11.25 15.625"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </span>
+                </button>
+                <div class="form-status" aria-live="polite"></div>
+                <input
+                    type="text"
+                    name="website"
+                    class="honeypot"
+                    id="honeypot"
+                    tabindex="-1"
+                    autocomplete="off"
+                    aria-hidden="true"
+                />
+            </form>
+        </section>
+
+        <section class="direct-contact">
+            <p class="direct-contact-text">
+                <a href="mailto:sahl.lahouaoui.work@gmail.com" class="email-link"
+                    >sahl.lahouaoui.work@gmail.com</a
+                >
+            </p>
+            <h2 class="fmo">Or find me on</h2>
+            <div class="direct-social-links">
+                <a
+                    href="404.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-btn instagram"
+                >
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="3" width="18" height="18" rx="5" />
+                        <circle cx="12" cy="12" r="4" />
+                        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                    </svg>
+                    <span>Instagram</span>
+                </a>
+
+                <a
+                    href="https://wa.me/212649407895"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-btn whatsapp"
+                >
+                    <svg
+                        viewBox="0 0 24 24"
+                        width="18"
+                        height="18"
+                        fill="currentColor"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M20.52 3.48A11.87 11.87 0 0 0 12.05 0
+                    C5.5 0 .17 5.33.17 11.88
+                    c0 2.09.55 4.13 1.6 5.92L.07 24l6.35-1.67
+                    a11.84 11.84 0 0 0 5.63 1.43h.01
+                    c6.55 0 11.88-5.33 11.88-11.88
+                    c0-3.17-1.23-6.15-3.42-8.4z
+
+                    M12.06 21.76h-.01
+                    a9.86 9.86 0 0 1-5.03-1.38l-.36-.21
+                    -3.77.99 1.01-3.67-.23-.38
+                    a9.88 9.88 0 0 1-1.51-5.23
+                    c0-5.45 4.44-9.89 9.9-9.89
+                    2.64 0 5.12 1.03 6.99 2.9
+                    a9.83 9.83 0 0 1 2.9 7
+                    c0 5.44-4.44 9.87-9.89 9.87z
+
+                    m5.42-7.4
+                    c-.3-.15-1.77-.87-2.05-.97
+                    -.27-.1-.47-.15-.67.15
+                    -.2.3-.77.97-.94 1.17
+                    -.17.2-.35.22-.65.07
+                    -.3-.15-1.26-.46-2.4-1.47
+                    -.89-.79-1.49-1.77-1.67-2.07
+                    -.17-.3-.02-.46.13-.61
+                    .13-.13.3-.35.45-.52
+                    .15-.17.2-.3.3-.5
+                    .1-.2.05-.37-.02-.52
+                    -.07-.15-.67-1.62-.92-2.22
+                    -.24-.58-.49-.5-.67-.51
+                    h-.57c-.2 0-.52.07-.8.37
+                    -.27.3-1.04 1.02-1.04 2.49
+                    s1.07 2.89 1.22 3.09
+                    c.15.2 2.1 3.21 5.09 4.5
+                    .71.31 1.27.49 1.7.63
+                    .71.23 1.36.2 1.87.12
+                    .57-.08 1.77-.72 2.02-1.42
+                    .25-.7.25-1.3.17-1.42
+                    -.07-.12-.27-.2-.57-.35z"
+                        ></path>
+                    </svg>
+                    <span>WhatsApp</span>
+                </a>
+
+                <a
+                    href="https://github.com/sahl-lahouaoui"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-btn github"
+                >
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2a10 10 0 00-3.16 19.5c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.83-2.34 4.68-4.57 4.92.36.31.68.92.68 1.85v2.74c0 .26.18.58.69.48A10 10 0 0012 2z"
+                        />
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </section>
 
         <site-footer></site-footer>
         <script type="module" src="components/SiteFooter.js"></script>
         <script type="module" src="components/SiteHeader.js"></script>
         <script type="module" src="components/Theme.js"></script>
-        
+
         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
         <script src="scripts/contact.js"></script>
-        
+
         <script>
-        const email = document.getElementById("email");
+            const email = document.getElementById('email');
 
-email.addEventListener("blur", () => {
-    if (email.value === "") {
-        email.classList.remove("error", "success");
-    } else if (email.validity.valid) {
-        email.classList.remove("error");
-        email.classList.add("success");
-    } else {
-        email.classList.remove("success");
-        email.classList.add("error");
-    }
-});
-        
-        const requiredFields = form.querySelectorAll("[required]");
+            email.addEventListener('blur', () => {
+                if (email.value === '') {
+                    email.classList.remove('error', 'success');
+                } else if (email.validity.valid) {
+                    email.classList.remove('error');
+                    email.classList.add('success');
+                } else {
+                    email.classList.remove('success');
+                    email.classList.add('error');
+                }
+            });
 
-requiredFields.forEach((field) => {
-    field.addEventListener("invalid", () => {
-        field.parentElement.classList.add("required-error");
-    });
+            const requiredFields = form.querySelectorAll('[required]');
 
-    field.addEventListener("input", () => {
-        if (field.value.trim() !== "") {
-            field.parentElement.classList.remove("required-error");
-        }
-    });
-});
-        
-        
-        
-        (function () {
-    emailjs.init({
-        publicKey: "aREtvPgmDZkxOyQSJ",
-    });
-})();
+            requiredFields.forEach((field) => {
+                field.addEventListener('invalid', () => {
+                    field.parentElement.classList.add('required-error');
+                });
 
-const form = document.getElementById("contact-form");
-const statusBox = document.querySelector(".form-status");
-const submitBtn = form.querySelector(".submit-button");
-
-function showStatus(message, type) {
-    statusBox.textContent = message;
-    statusBox.className = "form-status show " + type;
-}
-
-function setLoading(isLoading) {
-    submitBtn.disabled = isLoading;
-    submitBtn.classList.toggle("loading", isLoading);
-}
-
-form.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    if (form.website.value.trim() !== "") {
-        return;
-    }
-
-    setLoading(true);
-    statusBox.className = "form-status";
-
-    emailjs
-        .sendForm("service_2pdjr0m", "template_yaom5pe", form)
-        .then(function () {
-            showStatus("تصيفطات الرسالة بنجاح! غادي نرد عليك قريب.", "success");
-            form.reset();
-        })
-        .catch(function (error) {
-            console.error("EmailJS ERROR:", error);
-            showStatus("وقع خطأ. عافاك حاول مرة أخرى.", "error");
-        })
-        .finally(function () {
-            setLoading(false);
-        });
-});
+                field.addEventListener('input', () => {
+                    if (field.value.trim() !== '') {
+                        field.parentElement.classList.remove('required-error');
+                    }
+                });
+            });
         </script>
     </body>
 </html>
