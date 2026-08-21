@@ -12,14 +12,15 @@
         <meta property="og:image" content="images/logo/preview.webp" />
         <meta property="og:type" content="website" />
         <link rel="stylesheet" href="styles/design-style.css" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&family=Sora:wght@100..800&display=swap"
-/>
-        <meta name="color-scheme" content="light">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&family=Sora:wght@100..800&display=swap"
+        />
+        <meta name="color-scheme" content="light" />
         <title>design - Sahl</title>
+        
     </head>
     <body>
         <site-loader></site-loader>
@@ -27,13 +28,14 @@
         <site-theme></site-theme>
         <site-header></site-header>
         <zoomable-photos></zoomable-photos>
+        <protected-img></protected-img>
 
         <section class="design">
             <div class="design-1">
                 <h1>Traditional Version</h1>
-                <img src="images/design candy.webp" class="zoomable" />
+                <img src="images/design candy.webp" class="zoomable protected" />
                 <h1>Digital Version</h1>
-                <img src="images/design candy DG.webp" class="zoomable" />
+                <img src="images/design candy DG.webp" class="zoomable protected Oline" />
             </div>
 
             <div class="wave">
@@ -43,14 +45,20 @@
             </div>
         </section>
 
+        
         <c-s></c-s>
+        <min-contact></min-contact>
+        
         <site-footer></site-footer>
         <script type="module" src="components/SiteFooter.js"></script>
         <script type="module" src="components/SiteHeader.js"></script>
         <script type="module" src="components/Zoomable.js"></script>
         <script type="module" src="components/Theme.js"></script>
         <script type="module" src="components/ComingSoon.js"></script>
+        <script type="module" src="components/ProtectedImg.js"></script>
+        <script type="module" src="components/mincontact.js"></script>
 
+        
         <script>
             // ===== Info button (view details popup) =====
             document.querySelectorAll('.info-btn').forEach((btn) => {

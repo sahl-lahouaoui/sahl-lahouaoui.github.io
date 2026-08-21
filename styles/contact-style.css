@@ -1,27 +1,102 @@
+/* ========================================
+   CONTACT TITLE
+======================================== */
+
 .contact-title {
-    font-size: 60px;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-    margin-bottom: 80px;
+    font-size: clamp(42px, 6vw, 60px);
+    text-align: center;
+
+    margin: 50px 20px 80px;
+
     font-weight: 500;
+    line-height: 1.1;
+    
+    color: var(--green);
 }
 
+.contact-title span {
+    opacity: 80%;
+    color: var(--orange);
+}
+
+/* ========================================
+   CONTACT FORM
+======================================== */
+
 .template {
+    width: min(720px, calc(100% - 40px));
+
+    margin: 0 auto;
+
     display: flex;
     flex-direction: column;
+
     justify-content: center;
     align-items: center;
-    margin: 20px;
 }
+
+
+/* ========================================
+   FORM GROUPS
+======================================== */
+
+.reason,
+.message,
+.email,
+.name {
+    position: relative;
+
+    margin-bottom: 42px;
+}
+
+
+/* ========================================
+   FORM TITLES
+======================================== */
+
+.name label,
+.email label,
+.reason label,
+.message label{
+    font-size: clamp(28px, 4vw, 40px);
+
+    font-weight: 500;
+
+    margin-bottom: 20px;
+
+    line-height: 1.1;
+}
+
+.name h2 {
+    font-size: clamp(34px, 5vw, 50px);
+}
+
+.message h1 {
+    font-size: clamp(34px, 5vw, 40px);
+    color: var(--green);
+
+    font-weight: 500;
+
+    margin-bottom: 36px;
+
+    line-height: 1.1;
+}
+
+
+/* ========================================
+   INPUTS & TEXTAREA
+======================================== */
+
 .template input,
 .template textarea {
     width: 100%;
+
     box-sizing: border-box;
 
-    padding: 18px 0 18px 10px;
+    padding: 16px 0 16px 10px;
 
     border: none;
+
     border-bottom: 1px solid rgb(0 0 0 / 25%);
 
     background: transparent;
@@ -29,7 +104,9 @@
     outline: none;
 
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 20px;
+
+    font-size: 18px;
+
     font-weight: 500;
 
     color: var(--black);
@@ -39,59 +116,56 @@
         padding-left 0.3s ease;
 }
 
+
+/* TEXTAREA */
+
+.template textarea {
+    min-height: 140px;
+
+    resize: vertical;
+}
+
+
+/* INPUT FOCUS */
+
 .template input:focus,
 .template textarea:focus {
     border-bottom-color: var(--black);
 }
 
-.reason,
-.mesage,
-.email,
-.name {
-    margin-bottom: 20px;
-}
 
-.reason h2,
-.message h2,
-.email h2,
-.name h2 {
-    font-size: 40px;
-    font-weight: 500;
-    margin-bottom: 20px;
-    line-height: 1;
-}
-.message h1 {
-    font-size: 40px;
-    font-weight: 500;
-    margin-bottom: 40px;
-    line-height: 1;
-}
-.name h2 {
-    font-size: 50px;
-    font-weight: 500;
-    margin-bottom: 20px;
-    line-height: 1;
-}
+/* ========================================
+   PRIVACY CONSENT
+======================================== */
 
 .privacy-consent {
     justify-content: center;
-    align-items: center;
-    display: flex;
+
     align-items: flex-start;
+
+    display: flex;
+
     gap: 12px;
 
+    width: 100%;
+
     max-width: 650px;
-    margin: 30px 0;
-    margin-top: 80px;
+
+    margin: 50px 0 30px;
 
     color: rgb(0 0 0 / 65%);
 
     font-family: 'Plus Jakarta Sans', sans-serif;
+
     font-size: 14px;
+
     line-height: 1.5;
 
     cursor: pointer;
 }
+
+
+/* CHECKBOX */
 
 .privacy-consent input {
     appearance: none;
@@ -106,9 +180,11 @@
     flex-shrink: 0;
 
     padding: 0 !important;
+
     margin: 2px 0 0;
 
     border: 1px solid rgb(0 0 0 / 45%);
+
     border-radius: 4px !important;
 
     background: transparent;
@@ -120,15 +196,23 @@
         border-color 0.2s ease;
 }
 
+
+/* CHECKED */
+
 .privacy-consent input:checked {
-    background-color: var(--black);
-    border-color: var(--white);
+    background-color: var(--green);
+
+    border-color: var(--green);
 }
+
+
+/* CHECKMARK */
 
 .privacy-consent input:checked::after {
     content: '✓';
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -136,209 +220,369 @@
     height: 100%;
 
     color: var(--white);
+
     font-size: 12px;
+
     font-weight: 700;
 }
 
+
+/* CHECKBOX FOCUS */
+
 .privacy-consent input:focus-visible {
-    outline: 2px solid rgb(255 255 255 / 50%);
+    outline: 2px solid var(--black);
+
     outline-offset: 3px;
 }
+
+
+/* TEXT */
 
 .privacy-consent span {
     cursor: pointer;
 }
 
+
+/* ========================================
+   SUBMIT BUTTON
+======================================== */
+
 .submit-button {
     margin: 0 auto;
-    margin-top: 30px;
 
-    min-width: 300px;
-    height: 75px;
+    margin-top: 25px;
+
+    min-width: 260px;
+
+    height: 65px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     gap: 18px;
 
     border: none;
+
     border-radius: 100px;
 
-    background: var(--black);
+    background: var(--orange);
+
     color: var(--white);
 
     font-size: 17px;
+
     font-weight: 600;
 
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.2);
 
     cursor: pointer;
+
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease,
         filter 0.2s ease;
 }
 
+
+/* BUTTON ARROW */
+
 .submit-button .arrow {
     width: 20px;
+
     height: 20px;
+
     display: flex;
+
     flex-shrink: 0;
 
-    transition: transform 0.3s ease;
+    transition:
+        transform 0.3s ease;
 }
+
+
+/* SVG */
 
 .submit-button svg {
     width: 100%;
+
     height: 100%;
 }
+
+
+/* HOVER */
 
 .submit-button:hover {
     filter: brightness(1.1);
 }
 
+
+/* ARROW HOVER */
+
 .submit-button:hover .arrow {
     transform: translateX(6px);
 }
 
+
+/* ACTIVE */
+
 .submit-button:active {
     transform: translateY(3px);
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+
+    box-shadow:
+        0 1px 0 rgba(0, 0, 0, 0.2);
+
     filter: brightness(0.95);
 }
 
+.p-submit {
+    font-size: 13px;
+    text-align: center;
+    text-wrap: pretty;
+    color: rgb(var(--black-) / 80%);
+    margin: 15px 30px 0 30px;
+    min-width: 230px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ========================================
+   EMAIL VALIDATION
+======================================== */
+
 #email.error {
-    border-color: red;
-    color: red;
+    border-color: var(--red);
+
+    color: var(--red);
 }
 
 #email.success {
-    border-color: green;
-    color: green;
+    border-color: var(--green);
+
+    color: var(--green);
+    
+    filter: brightness(-10%);
 }
+
+
+/* ========================================
+   AUTOFILL
+======================================== */
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
-  -webkit-text-fill-color: #000 !important;
-  transition: background-color 5000s ease-in-out 0s;
+    -webkit-box-shadow:
+        0 0 0px 1000px #fff inset !important;
+
+    -webkit-text-fill-color:
+        #000 !important;
+
+    transition:
+        background-color 5000s ease-in-out 0s;
 }
+
 
 input:-webkit-autofill:valid {
-  -webkit-box-shadow: 0 0 0px 1000px #e8f5e9 inset !important;
-  -webkit-text-fill-color: #000 !important;
+    -webkit-box-shadow:
+        0 0 0px 1000px rgb(0 0 0 /0%) inset !important;
+
+    -webkit-text-fill-color:
+        var(--green) !important;
 }
 
+
 input:-webkit-autofill:invalid {
-  -webkit-box-shadow: 0 0 0px 1000px #fdecea inset !important;
-  -webkit-text-fill-color: #000 !important;
+    -webkit-box-shadow:
+        0 0 0px 1000px var(--red) inset !important;
+
+    -webkit-text-fill-color:
+        var(--red) !important;
 }
+
+
+/* ========================================
+   REQUIRED ERROR
+======================================== */
+
 .reason,
 .message,
 .name,
 .email {
     position: relative;
 }
-.reason.required-error h2::after,
-.message.required-error h2::after,
-.email.required-error h2::after,
-.name.required-error h2::after,
-.email.required-error h2::after {
+
+
+.reason.required-error label::after,
+.message.required-error label::after,
+.email.required-error label::after,
+.name.required-error label::after {
     content: " *";
+
     color: var(--red);
 }
 
+
+/* ========================================
+   HONEYPOT
+======================================== */
+
 .honeypot {
     position: absolute;
+
     left: -9999px;
+
     width: 1px;
+
     height: 1px;
+
     opacity: 0;
+
     pointer-events: none;
 }
 
 
+/* ========================================
+   FORM STATUS
+======================================== */
+
 .form-status {
     margin-top: 20px;
+
     font-family: 'Plus Jakarta Sans', sans-serif;
+
     font-size: 15px;
+
     font-weight: 500;
+
     text-align: center;
+
     min-height: 20px;
+
     opacity: 0;
+
     transform: translateY(-5px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
 }
+
 
 .form-status.show {
     opacity: 1;
+
     transform: translateY(0);
 }
+
 
 .form-status.success {
     color: green;
 }
+
 
 .form-status.error {
     color: red;
 }
 
 
+/* ========================================
+   DIRECT CONTACT
+======================================== */
+
 .direct-contact {
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     text-align: center;
-    margin: 0 20px 60px;
+
+    margin: 50px 20px 20px;
 }
+
 
 .direct-contact-text {
     font-family: 'Plus Jakarta Sans', sans-serif;
+
     font-size: 18px;
+
     font-weight: 500;
+
     color: rgb(0 0 0 / 70%);
+
     line-height: 1.6;
+
     margin-bottom: 30px;
+
     max-width: 500px;
 }
 
+
 .email-link {
     display: inline-block;
+
     margin-top: 6px;
+
     color: var(--black);
+
     font-weight: 600;
+
     text-decoration: none;
+
     border-bottom: 1.5px solid var(--black);
-    transition: opacity 0.2s ease;
+
+    transition:
+        opacity 0.2s ease;
 }
 
+
 .email-link:hover {
-    opacity: 0.6;
+    border-bottom: 1.5px solid var(--orange);
+    color: var(--orange);
 }
+
+
+/* ========================================
+   SOCIAL MEDIA
+======================================== */
 
 .direct-social-links {
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 14px;
+
     justify-content: center;
 }
 
+
 .social-btn {
     display: flex;
+
     align-items: center;
+
     gap: 10px;
 
     padding: 14px 22px;
 
     border: 1px solid rgb(0 0 0 / 15%);
+
     border-radius: 100px;
 
     color: var(--black);
+
     text-decoration: none;
 
     font-family: 'Plus Jakarta Sans', sans-serif;
+
     font-size: 15px;
+
     font-weight: 600;
 
     transition:
@@ -347,18 +591,195 @@ input:-webkit-autofill:invalid {
         transform 0.2s ease;
 }
 
+
 .social-btn svg {
     width: 20px;
+
     height: 20px;
+
     flex-shrink: 0;
 }
 
+
 .social-btn:hover {
-    background-color: var(--black);
+    background-color: var(--orange);
+
     color: var(--white);
+    
+    border: 1px solid rgb(0 0 0 / 0%);
+
     transform: translateY(-2px);
 }
+
+
+/* ========================================
+   "OR FIND ME ON"
+======================================== */
+
 .fmo {
     margin-bottom: 30px;
-    color: rgb(var(--black-) /90%);
+
+    color: var(--green);
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    /* TITLE */
+
+    .contact-title {
+        margin-top: 40px;
+
+        margin-bottom: 65px;
+
+        font-size: clamp(
+            40px,
+            11vw,
+            52px
+        );
+    }
+
+
+    /* FORM */
+
+    .template {
+        width: calc(100% - 40px);
+    }
+
+
+    /* GROUPS */
+
+    .reason,
+    .message,
+    .email,
+    .name {
+        margin-bottom: 38px;
+    }
+
+
+    /* HEADINGS */
+
+    .reason h2,
+    .message h2,
+    .email h2,
+    .name h2 {
+        font-size: 29px;
+    }
+
+
+    .name h2 {
+        font-size: 36px;
+    }
+
+
+    .message h1 {
+        font-size: 34px;
+
+        margin-bottom: 32px;
+    }
+
+
+    /* INPUTS */
+
+    .template input,
+    .template textarea {
+        font-size: 17px;
+    }
+
+
+    /* PRIVACY */
+
+    .privacy-consent {
+        margin-top: 40px;
+
+        font-size: 13px;
+    }
+
+
+    /* BUTTON */
+
+    .submit-button {
+        width: 100%;
+
+        min-width: 0;
+
+        max-width: 300px;
+
+        height: 62px;
+    }
+    
+    .p-submit {
+        max-width: 300px;
+        
+        min-width: 0;
+    }
+    
+    /* DIRECT CONTACT */
+
+    .direct-contact {
+        margin-top: 25px;
+    }
+}
+
+
+/* ========================================
+   VERY SMALL PHONES
+======================================== */
+
+@media (max-width: 380px) {
+
+    .contact-title {
+        margin-left: 16px;
+
+        margin-right: 16px;
+
+        font-size: 38px;
+    }
+
+
+    .template {
+        width: calc(100% - 32px);
+    }
+
+
+    .reason h2,
+    .message h2,
+    .email h2,
+    .name h2 {
+        font-size: 27px;
+    }
+
+
+    .name h2 {
+        font-size: 34px;
+    }
+
+
+    .message h1 {
+        font-size: 31px;
+    }
+
+
+    .social-btn {
+        padding: 12px 18px;
+
+        font-size: 14px;
+    }
+}
+
+.footer-sub {
+    margin-right: 4px;
+    position: absolute;
+    right: 0;
+}
+.footer-sub img {
+    width: 100px;
+    height: auto;
+    transform: translateY(-30px) scaleX(-1);
+    filter: drop-shadow(0 10px 10px rgba(250, 250, 250, 0.2));
+    
 }

@@ -24,6 +24,10 @@
     border-radius: 10px;
     margin-bottom: 30px;
 }
+.Oline{
+  /*  filter: drop-shadow(0 0px 10px rgba(0, 0, 0, 0.3));
+    border: 2px solid rgb(var(--black-) /50%);*/
+}
 .wave {
     bottom: -1px;
     left: 0;
@@ -123,3 +127,5 @@
     overflow-wrap: break-word;
     margin: 0;
 }
+
+

@@ -25,41 +25,57 @@
         <site-theme></site-theme>
         <site-header></site-header>
 
-        <h1 class="contact-title">Get in touch with me.</h1>
+        <h1 class="contact-title">Get in touch with<span> me.</span></h1>
 
         <section class="template">
             <form id="contact-form">
                 <div class="name">
-                    <h2>Hi, I’m</h2>
-                    <input type="text" name="name" placeholder="What's your name?" required />
-                </div>
+    <label for="name">Hi, I’m</label>
+    <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="your name"
+        autocomplete="name"
+        required
+    />
+</div>
 
-                <div class="email">
-                    <h2>Where can I reach you?</h2>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="What's your email address?"
-                        required
-                    />
-                </div>
+               <div class="email">
+    <label for="email">Where can I reach you?</label>
+    <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="your.email@gmail.com"
+        autocomplete="email"
+        required
+    />
+</div>
 
                 <div class="reason">
-                    <h2>What brings you here?</h2>
-                    <input type="text" name="reason" placeholder="What's this about?" required />
-                </div>
+    <label for="reason">What brings you here?</label>
+    <input
+        type="text"
+        id="reason"
+        name="reason"
+        placeholder="What's this about?"
+        required
+    />
+</div>
 
                 <div class="message">
-                    <h1>And let’s talk.</h1>
-                    <h2>What would you like to share?</h2>
+    <h1>And let’s talk.</h1>
 
-                    <textarea
-                        name="message"
-                        placeholder="Tell me a little more..."
-                        required
-                    ></textarea>
-                </div>
+    <label for="message">What would you like to share?</label>
+
+    <textarea
+        id="message"
+        name="message"
+        placeholder="Tell me a little more..."
+        required
+    ></textarea>
+</div>
 
                 <label class="privacy-consent">
                     <input type="checkbox" name="privacy_consent" value="I agree" required />
@@ -88,6 +104,9 @@
                         </svg>
                     </span>
                 </button>
+                
+                <p class="p-submit">I’ll get back to you as soon as I can. Thanks for your patience ;)</p>
+                
                 <div class="form-status" aria-live="polite"></div>
                 <input
                     type="text"
@@ -195,7 +214,11 @@
                 </a>
             </div>
         </section>
-
+        
+        <section class="footer-sub">
+            <img src="images/home/orange.webp" >
+        </section>
+        
         <site-footer></site-footer>
         <script type="module" src="components/SiteFooter.js"></script>
         <script type="module" src="components/SiteHeader.js"></script>

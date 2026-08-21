@@ -32,27 +32,39 @@
     width: 80%;
     height: auto;
 }
+/* ========================================
+              PORTFOLIO
+======================================== */
 
 .portfolio {
     display: flex;
+
     justify-content: center;
-    margin: 40px 0 100px 0;
+
+    margin: 40px 0 100px;
 }
 
 .port-links {
     display: flex;
+
     justify-content: center;
     align-items: center;
+
     gap: 30px;
 }
 
 .port-links img {
     width: 200px;
+
     height: auto;
+
     display: block;
+
     filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.2));
+
     transition: transform 0.3s ease;
 }
+
 .port-links img:hover {
     transform: scale(1.05);
 }
@@ -62,16 +74,26 @@
 ========================= */
 .contact-section {
     background: var(--black);
+
     color: var(--white);
+
     padding: 100px 40px 30px;
+
     margin-top: 30px;
 }
 
 .contact-top {
     display: flex;
+
     justify-content: space-between;
+
     align-items: flex-end;
+
     gap: 60px;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
 }
 
 .contact-text {
@@ -80,45 +102,73 @@
 
 .contact-text h2 {
     margin: 0 0 20px;
-    font-size: 90px;
+
+    font-size: clamp(60px, 7vw, 90px);
+
     font-weight: 400;
+
     line-height: 1;
+
+    letter-spacing: -0.04em;
 }
 
 .contact-text p {
     margin: 0;
+
     max-width: 650px;
-    font-size: 20px;
+
+    font-size: clamp(17px, 2vw, 20px);
+
     line-height: 1.4;
 }
 
+/* CONTACT LINE */
+
 .contact-line {
     width: 100%;
+
+    max-width: 1400px;
+
     height: 1px;
+
     background: #333;
-    margin-top: 80px;
+
+    margin: 80px auto 0;
 }
+
+/* CONTACT BUTTON */
+
 .contact-button {
     background: var(--white);
+
     color: var(--black);
 }
 
-/* ======= buttons css =======*/
-.about-button,
+/* ========================================
+              BUTTONS
+======================================== */
+
 .contact-button {
     min-width: 250px;
+
     height: 75px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
+
     gap: 18px;
 
     border-radius: 100px;
+
     text-decoration: none;
 
     font-size: 17px;
+
     font-weight: 600;
+
+    flex-shrink: 0;
 
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 
@@ -127,30 +177,48 @@
         box-shadow 0.2s ease,
         filter 0.2s ease;
 }
+
+/* BUTTON ARROW */
+
 .about-button .arrow,
 .contact-button .arrow {
     width: 20px;
+
     height: 20px;
+
     display: flex;
+
     flex-shrink: 0;
 
     transition: transform 0.3s ease;
 }
+
 .contact-button svg {
     width: 100%;
+
     height: 100%;
 }
+
+/* BUTTON HOVER */
+
 .contact-button:hover {
     filter: brightness(1.1);
 }
+
 .contact-button:hover .arrow {
     transform: translateX(6px);
 }
+
+/* BUTTON ACTIVE */
+
 .contact-button:active {
     transform: translateY(3px);
+
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+
     filter: brightness(0.95);
 }
+
 /* ===== RESPONSIVE: phone size ===== */
 @media (max-width: 768px) {
     .hero {
@@ -179,42 +247,94 @@
         width: 180%;
         margin-top: 10px;
     }
+    /* ================================
+             PORTFOLIO
+    ================================ */
+
+    .portfolio {
+        margin: 40px 0 80px;
+    }
+
     .port-links {
         flex-direction: column;
-    }
-    .port-links {
+
         gap: 20px;
     }
+
+    .port-links img {
+        width: min(200px, 65vw);
+    }
+
+    /* ================================
+              CONTACT
+    ================================ */
+
     .contact-section {
         padding: 60px 24px 25px;
+
+        margin-top: 20px;
     }
+
     .contact-top {
-        display: block;
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 35px;
     }
+
     .contact-text {
         max-width: none;
+
+        width: 100%;
     }
 
     .contact-text h2 {
-        font-size: 58px;
-        margin-bottom: 35px;
-        letter-spacing: -2px;
+        font-size: clamp(50px, 14vw, 68px);
+
+        margin-bottom: 28px;
+
+        letter-spacing: -0.04em;
     }
 
     .contact-text p {
-        font-size: 21px;
+        font-size: 20px;
+
         line-height: 1.45;
-        margin-bottom: 55px;
+
+        margin-bottom: 10px;
+
+        max-width: 600px;
     }
 
     .contact-button {
+        justify-content: center;
+
+        align-items: center;
+
         width: 100%;
+
         min-width: 0;
-        height: 95px;
-        font-size: 18px;
+
+        max-width: 300px;
+
+        height: 65px;
     }
 
     .contact-line {
         margin-top: 60px;
     }
+}
+
+.footer-sub {
+    margin-left: 3px;
+    position: absolute;
+}
+.footer-sub img {
+    width: 100px;
+    height: auto;
+    transform: translateY(-70px);
+    filter: drop-shadow(0 10px 10px rgba(250, 250, 250, 0.2));
 }

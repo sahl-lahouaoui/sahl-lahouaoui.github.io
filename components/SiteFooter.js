@@ -14,7 +14,7 @@ class SiteFooter extends HTMLElement {
         .site-footer {
           background: var(--black);
           color: #FAFAF7;
-          padding: 56px 40px 0;
+          padding: 50px 40px 0;
         }
         .footer-top {
           display: flex;
@@ -46,7 +46,8 @@ class SiteFooter extends HTMLElement {
           font-family: 'Plus Jakarta Sans', sans-serif;
           font-size: 0.85rem;
           line-height: 1.6;
-          color: rgba(250, 250, 247, 0.6);
+          /* Raised from 0.6 to 0.75 opacity to meet WCAG AA contrast on black */
+          color: rgba(250, 250, 247, 0.75);
           margin: 0;
         }
 
@@ -63,7 +64,8 @@ class SiteFooter extends HTMLElement {
           letter-spacing: 0.5px;
           text-transform: uppercase;
 
-          color: rgba(250, 250, 247, 0.5);
+          /* Raised from 0.5 to 0.65 opacity for readability */
+          color: rgba(250, 250, 247, 0.65);
 
           margin: 0 0 16px;
         }
@@ -72,7 +74,7 @@ class SiteFooter extends HTMLElement {
           list-style: none;
           display: flex;
           flex-direction: column;
-          gap: 10px;
+          gap: 12px;
 
           padding: 0;
           margin: 0;
@@ -85,6 +87,10 @@ class SiteFooter extends HTMLElement {
           color: #FAFAF7;
           text-decoration: none;
 
+          /* Larger tap target without changing visual spacing */
+          display: inline-block;
+          padding: 4px 0;
+
           transition: color 0.25s ease;
         }
 
@@ -92,6 +98,13 @@ class SiteFooter extends HTMLElement {
         .footer-links a:focus-visible {
           color: var(--white);
           text-decoration: underline;
+          text-underline-offset: 3px;
+        }
+
+        .footer-links a:focus-visible {
+          outline: 2px solid #FAFAF7;
+          outline-offset: 3px;
+          border-radius: 2px;
         }
 
 
@@ -105,8 +118,9 @@ class SiteFooter extends HTMLElement {
         }
 
         .footer-social-icons a {
-          width: 36px;
-          height: 36px;
+          /* Bumped from 36px to 44px to meet minimum recommended touch target size */
+          width: 44px;
+          height: 44px;
 
           border-radius: 50%;
           border: 1px solid rgba(250, 250, 247, 0.18);
@@ -132,6 +146,11 @@ class SiteFooter extends HTMLElement {
           transform: translateY(-3px);
         }
 
+        .footer-social-icons a:focus-visible {
+          outline: 2px solid #FAFAF7;
+          outline-offset: 3px;
+        }
+
 
         /* =========================
            FOOTER BOTTOM
@@ -149,7 +168,8 @@ class SiteFooter extends HTMLElement {
         .footer-bottom span {
           font-family: 'Plus Jakarta Sans', sans-serif;
           font-size: 0.78rem;
-          color: rgba(250, 250, 247, 0.45);
+          /* Raised from 0.45 to 0.6 opacity — 0.45 fails WCAG AA contrast on black */
+          color: rgba(250, 250, 247, 0.6);
         }
 
 
@@ -173,6 +193,8 @@ class SiteFooter extends HTMLElement {
           }
         }
       </style>
+        
+        
     <div class="invisible-space"></div>
       <!-- =========================
            FOOTER
@@ -205,7 +227,7 @@ class SiteFooter extends HTMLElement {
 
           <!-- NAVIGATION -->
 
-          <div class="footer-links">
+          <nav class="footer-links" aria-label="Footer navigation">
 
             <h3 data-i18n="footer_nav_title">
               Explore
@@ -245,7 +267,7 @@ class SiteFooter extends HTMLElement {
 
             </ul>
 
-          </div>
+          </nav>
 
 
           <!-- SOCIAL -->
@@ -256,10 +278,13 @@ class SiteFooter extends HTMLElement {
               Follow
             </h3>
 
-            <div class="footer-social-icons">
+            <nav class="footer-social-icons" aria-label="Social media links">
 
 
-        
+              <!--
+                TODO: replace with your real Instagram profile URL.
+                This was pointing at 404.html in the original file.
+              -->
               <a
                 href="404.html"
                 aria-label="Instagram"
@@ -300,11 +325,6 @@ class SiteFooter extends HTMLElement {
                 </svg>
 
               </a>
-
-
-              <!-- Phone -->
-
-              
 
 
               <!-- WhatsApp -->
@@ -403,7 +423,7 @@ class SiteFooter extends HTMLElement {
 
               </a>
 
-            </div>
+            </nav>
 
           </div>
 
