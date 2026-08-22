@@ -25,7 +25,7 @@ export const translations = {
 
         zoom_hint_title: 'تكبير الصور',
         zoom_hint: 'اضغط على أي صورة لتكبيرها',
-        footer_tagline: 'مجموعة من الأفكار والتجارب والأعمال البصرية.',
+        e: 'مجموعة من الأفكار والتجارب والأعمال البصرية.',
         footer_nav_title: 'استكشف',
         footer_social_title: 'تابعني',
         footer_rights: 'جميع الحقوق محفوظة.',
@@ -65,6 +65,27 @@ export const translations = {
         h2_contact: 'لنتحدث قليلًا.',
         p_contact: 'هل ترغب في التحدث أو مشاركة شيء ما، أو مجرد إلقاء التحية؟ لنتحدث.',
         span_contact: 'تواصل معي',
+
+        contact_title: 'تواصل',
+        contact_tilte_span: 'معي',
+
+        contact_name_label: 'مرحبا اسمي',
+        contact_name_input: 'اسمك',
+
+        contact_email_label: 'اين بامكاني ان اتواصل معك ؟',
+
+        contact_reason_label: '',
+        contact_reason_input: '',
+
+        contact_message_h1: '',
+        contact_message_label: '',
+        contact_message_input: 'اخبرني المزيد',
+
+        privacy_consent: '',
+        send_message: '',
+
+        p_submit: '',
+        fmo: '',
     },
 
     FR: {
@@ -76,7 +97,7 @@ export const translations = {
         info_icon: 'Voir les détails',
         black_white_titel: 'Noir et Blanc',
         view_info1:
-            'Description :\nCette photographie montre des plantes visibles à travers une vitre embuée, créant une ambiance douce et mystérieuse où la lumière et les ombres se mélangent harmonieusement.\nAppareil : iPhone 12\nRetouche : Adobe Lightroom',
+            'Description :\nCette photographie montre des plantes visibles à travers une vitre embuée, créant une ambiance douce et mystér: et les ombres se mélangent harmonieusement.\nAppareil : iPhone 12\nRetouche : Adobe Lightroom',
         view_info2: 'Appareil : infinix smart 8\nRetouche : Adobe Lightroom',
         BY_titel: 'Noir et Jaune',
         view_info_BY1: 'Appareil : iPhone 16\nRetouche : Adobe Lightroom',
@@ -129,6 +150,26 @@ export const translations = {
         h2_contact: 'Parlons un peu.',
         p_contact: 'Envie d’échanger, de partager ou simplement de dire bonjour ? Parlons-en.',
         span_contact: 'ME CONTACTER',
+
+        consent_title: '',
+
+        contact_name_label: '',
+        contact_name_input: '',
+
+        contact_email_label: '',
+        contact_email_input: '',
+
+        contact_reason_label: '',
+        contact_name_input: '',
+
+        contact_message_label: '',
+        contact_message_input: '',
+
+        privacy_consent: '',
+        send_message: '',
+
+        p_submit: '',
+        fmo: '',
     },
 };
 
